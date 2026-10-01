@@ -1,2 +1,13 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* Adicione esta regra para habilitar a rolagem suave em todo o site */
+html {
+  scroll-behavior: smooth;
+}
+
+@theme inline {
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-manrope);
+}
