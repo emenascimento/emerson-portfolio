@@ -11,7 +11,7 @@ export function ResumeModal() {
       {/* Botão no Rodapé que abre a Modal */}
       <button 
         onClick={() => setIsOpen(true)}
-        className="flex items-center gap-1 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors bg-transparent border-none cursor-pointer p-0 text-sm font-medium"
+        className="text-zinc-700 dark:text-zinc-300 hover:text-[#155dfc] dark:hover:text-[#155dfc] cursor-pointer transition-colors"
       >
         Currículo
       </button>
