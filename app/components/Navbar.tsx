@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from './ThemeToggle';
@@ -13,10 +13,53 @@ import {
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
   const pathname = usePathname();
   
   // Verifica se estamos na página inicial
   const isHome = pathname === '/';
+
+  // IntersectionObserver para detectar qual sessão está visível na tela durante o scroll
+  useEffect(() => {
+    if (!isHome) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+
+    const sections = ['projetos', 'portfolio-produto', 'o-que-faco', 'sobre'];
+    
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      sections.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) observer.unobserve(el);
+      });
+    };
+  }, [isHome]);
+
+  const getDesktopLinkClass = (section: string) => {
+    const isActive = activeSection === section;
+    return `transition-colors ${isActive ? 'text-[#155dfc] font-bold' : 'hover:text-[#155dfc] dark:hover:text-[#155dfc]'}`;
+  };
+
+  const getMobileLinkClass = (section: string) => {
+    const isActive = activeSection === section;
+    return `py-1 transition-colors ${isActive ? 'text-[#155dfc] font-bold' : 'text-zinc-700 dark:text-zinc-300 hover:text-[#155dfc]'}`;
+  };
+
+  const handleLinkClick = (section: string) => {
+    setActiveSection(section);
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <>
@@ -25,22 +68,22 @@ export function Navbar() {
           
           <div className="flex items-center gap-4 sm:gap-8">
             <Link href="/" className="font-heading font-extrabold text-xl tracking-tight text-zinc-900 dark:text-zinc-50">
-              EN.
+              EN<span className="text-[#155dfc]">.</span>
             </Link>
             
             {/* Lógica condicional: Menu da Home vs Botão Voltar das internas */}
             {isHome ? (
               <div className="hidden sm:flex items-center gap-6 text-sm font-medium text-zinc-500 dark:text-zinc-400">
-                <Link href="#projetos" className="hover:text-[#155dfc] dark:hover:text-[#155dfc] transition-colors">
+                <Link href="#projetos" onClick={() => handleLinkClick('projetos')} className={getDesktopLinkClass('projetos')}>
                   Projetos
                 </Link>
-                <Link href="#portfolio-produto" className="hover:text-[#155dfc] dark:hover:text-[#155dfc] transition-colors">
+                <Link href="#portfolio-produto" onClick={() => handleLinkClick('portfolio-produto')} className={getDesktopLinkClass('portfolio-produto')}>
                   Este Portfólio
                 </Link>
-                <Link href="#o-que-faco" className="hover:text-[#155dfc] dark:hover:text-[#155dfc] transition-colors">
+                <Link href="#o-que-faco" onClick={() => handleLinkClick('o-que-faco')} className={getDesktopLinkClass('o-que-faco')}>
                   O que faço
                 </Link>
-                <Link href="#sobre" className="hover:text-[#155dfc] dark:hover:text-[#155dfc] transition-colors">
+                <Link href="#sobre" onClick={() => handleLinkClick('sobre')} className={getDesktopLinkClass('sobre')}>
                   Sobre
                 </Link>
               </div>
@@ -91,16 +134,16 @@ export function Navbar() {
         {isHome && isMobileMenuOpen && (
           <div className="sm:hidden border-t border-zinc-200/80 dark:border-zinc-800/80 bg-zinc-50/95 dark:bg-zinc-950/95 backdrop-blur-md px-6 py-6 animate-in slide-in-from-top-2 duration-200">
             <div className="flex flex-col gap-4 text-base font-semibold">
-              <Link href="#projetos" onClick={() => setIsMobileMenuOpen(false)} className="py-1 text-zinc-700 dark:text-zinc-300 hover:text-[#155dfc] transition-colors">
+              <Link href="#projetos" onClick={() => handleLinkClick('projetos')} className={getMobileLinkClass('projetos')}>
                 Projetos
               </Link>
-              <Link href="#portfolio-produto" onClick={() => setIsMobileMenuOpen(false)} className="py-1 text-zinc-700 dark:text-zinc-300 hover:text-[#155dfc] transition-colors">
+              <Link href="#portfolio-produto" onClick={() => handleLinkClick('portfolio-produto')} className={getMobileLinkClass('portfolio-produto')}>
                 Este Portfólio
               </Link>
-              <Link href="#o-que-faco" onClick={() => setIsMobileMenuOpen(false)} className="py-1 text-zinc-700 dark:text-zinc-300 hover:text-[#155dfc] transition-colors">
+              <Link href="#o-que-faco" onClick={() => handleLinkClick('o-que-faco')} className={getMobileLinkClass('o-que-faco')}>
                 O que faço
               </Link>
-              <Link href="#sobre" onClick={() => setIsMobileMenuOpen(false)} className="py-1 text-zinc-700 dark:text-zinc-300 hover:text-[#155dfc] transition-colors">
+              <Link href="#sobre" onClick={() => handleLinkClick('sobre')} className={getMobileLinkClass('sobre')}>
                 Sobre
               </Link>
 

@@ -30,7 +30,7 @@ export function ResumeModal() {
               <div className="flex items-center gap-3">
                 {/* Botão de Download */}
                 <a
-                  href="/curriculo.pdf"
+                  href="/Curriculo_Emerson_Nascimento_2026.pdf"
                   download="Curriculo-Emerson-Nascimento.pdf"
                   className="inline-flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold text-zinc-900 dark:text-zinc-100 bg-zinc-200 dark:bg-zinc-800 hover:bg-zinc-300 dark:hover:bg-zinc-700 rounded-lg transition-colors"
                 >
@@ -52,7 +52,7 @@ export function ResumeModal() {
             {/* Corpo com o Visualizador de PDF */}
             <div className="flex-1 w-full bg-zinc-100 dark:bg-zinc-950 p-2 sm:p-4 overflow-hidden">
               <iframe
-                src="/curriculo.pdf"
+                src="/Curriculo_Emerson_Nascimento_2026.pdf"
                 className="w-full h-full rounded-lg border border-zinc-300 dark:border-zinc-800 bg-white"
                 title="Currículo Emerson Nascimento"
               />

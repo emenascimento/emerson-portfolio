@@ -72,14 +72,14 @@ export default function Home() {
             
             <article className="group cursor-pointer">
               <Link href="/case-produto-1">
-                <div className="relative w-full aspect-[4/3] bg-zinc-200 dark:bg-zinc-800 rounded-2xl mb-6 overflow-hidden border border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
-                  <span className="text-zinc-400 font-medium">[Imagem Case 1]</span>
+                <div className="relative w-full aspect-[4/3] bg-zinc-950 rounded-2xl mb-6 overflow-hidden border border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
+                  <Image src="/moneyfy/hero-2.jpg" alt="Capa do case MoneyFy" fill className="object-contain" />
                 </div>
                 <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-3 group-hover:text-[#155dfc] transition-colors">
-                  Título do Projeto Antigo 1
+                  MoneyFy
                 </h3>
                 <p className="text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">
-                  Breve descrição do problema resolvido focando no impacto e nas métricas alcançadas.
+                  Reposicionamento de um SaaS financeiro para escritórios de P.I., alinhando o website com a nova proposta de valor e garantindo viabilidade técnica.
                 </p>
                 <span className="flex items-center gap-1 text-sm text-zinc-900 dark:text-zinc-50 font-bold group-hover:text-[#155dfc] dark:group-hover:text-[#155dfc] transition-colors">
                   Ler o case de estudo <IconArrowRight size={18} stroke={2} className="transition-transform group-hover:translate-x-1" />
@@ -90,13 +90,13 @@ export default function Home() {
             <article className="group cursor-pointer">
               <Link href="/case-produto-2">
                 <div className="relative w-full aspect-[4/3] bg-zinc-200 dark:bg-zinc-800 rounded-2xl mb-6 overflow-hidden border border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
-                  <span className="text-zinc-400 font-medium">[Imagem Case 2]</span>
+                  <Image src="/nutriguide/hero.jpg" alt="Capa do case NutriGuide" fill className="object-cover" />
                 </div>
                 <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-3 group-hover:text-[#155dfc] transition-colors">
-                  Título do Projeto Antigo 2
+                  NutriGuide
                 </h3>
                 <p className="text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">
-                  Uma linha sobre como liderou o discovery ou estruturou o Design System deste produto.
+                  Concepção de um aplicativo que conecta pacientes e funciona como sistema estratégico de retenção para nutricionistas em um contexto híbrido.
                 </p>
                 <span className="flex items-center gap-1 text-sm text-zinc-900 dark:text-zinc-50 font-bold group-hover:text-[#155dfc] dark:group-hover:text-[#155dfc] transition-colors">
                   Ler o case de estudo <IconArrowRight size={18} stroke={2} className="transition-transform group-hover:translate-x-1" />
@@ -131,8 +131,8 @@ export default function Home() {
 
             {/* Imagem de Destaque */}
             <div className="flex-1 w-full z-10">
-              <div className="relative w-full aspect-[4/3] bg-zinc-200 dark:bg-zinc-800 rounded-2xl overflow-hidden border border-zinc-300 dark:border-zinc-700 shadow-2xl flex items-center justify-center">
-                 <span className="text-zinc-400 font-medium">[Mockup do Portfólio Aqui]</span>
+              <div className="relative w-full aspect-[4/3] bg-zinc-900 dark:bg-zinc-950 rounded-2xl overflow-hidden border border-zinc-300 dark:border-zinc-700 shadow-2xl flex items-center justify-center">
+                 <Image src="/cover-portfolio.jpg" alt="Mockup do Portfólio" fill className="object-contain object-center" />
               </div>
             </div>
           </div>
