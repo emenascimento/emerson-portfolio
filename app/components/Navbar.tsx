@@ -31,7 +31,7 @@ export function Navbar() {
       });
     }, { rootMargin: '-20% 0px -60% 0px' });
 
-    const sections = ['projetos', 'portfolio-produto', 'o-que-faco', 'sobre'];
+    const sections = ['projetos', 'portfolio-produto', 'o-que-faco', 'sobre', 'contato'];
     
     sections.forEach((id) => {
       const el = document.getElementById(id);
@@ -85,6 +85,9 @@ export function Navbar() {
                 </Link>
                 <Link href="#sobre" onClick={() => handleLinkClick('sobre')} className={getDesktopLinkClass('sobre')}>
                   Sobre
+                </Link>
+                <Link href="#contato" onClick={() => handleLinkClick('contato')} className={getDesktopLinkClass('contato')}>
+                  Contato
                 </Link>
               </div>
             ) : (
@@ -145,6 +148,9 @@ export function Navbar() {
               </Link>
               <Link href="#sobre" onClick={() => handleLinkClick('sobre')} className={getMobileLinkClass('sobre')}>
                 Sobre
+              </Link>
+              <Link href="#contato" onClick={() => handleLinkClick('contato')} className={getMobileLinkClass('contato')}>
+                Contato
               </Link>
 
               <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800">

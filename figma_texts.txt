@@ -1,0 +1,1932 @@
+HANDOFF · DESENVOLVIMENTO
+
+Pesquisa Figurativa — Webseek V1
+
+Especificação das telas, fluxos, componentes, fundamentos visuais e regras de negócio do módulo Figurativo, prontos para implementação.
+
+Produto:
+
+Webseek
+
+Módulo:
+
+Figurativo (Beta)
+
+Versão:
+
+V1
+
+Responsável:
+
+Emerson Nascimento
+
+Atualizado:
+
+06/10/2026
+
+Status:
+
+Pronto para dev
+
+Escopo deste handoff
+
+01 · Fluxo Pesquisa Figurativa — upload, filtros, resultados, avaliação, detalhes, comparação, seleção e impressão
+02 · Histórico de Pesquisa (Logs) — usuário Master/Admin
+03 · Histórico de Pesquisa (Logs) — usuário dependente
+04 · Componentes e variantes (DS)
+05 · Fundamentos — cores e tipografia
+06 · Regras de negócio, estados e validações
+
+Perfis de usuário
+
+Master / Admin
+Acessa o histórico de todos os usuários da conta e pode filtrar por Usuário, Período, Avaliação e Ação.
+
+Usuário dependente
+Visualiza apenas o próprio histórico. O filtro de Usuário não é exibido e não há acesso aos históricos de outros usuários.
+
+Como ler este handoff
+
+● Número = ordem da etapa no fluxo
+→ Seta = transição entre telas
+Post-it = regra ou observação de comportamento
+Telas são cópias do protótipo (seção “Figurativo”); em caso de divergência, vale a seção 06 · Regras.
+Resolução base das telas: 1366 × 768 px (desktop).
+
+FLUXO 01
+
+Pesquisa Figurativa — Pesquisa, Detalhes e Impressões
+
+Jornada completa do usuário: acesso ao módulo, upload da imagem, configuração dos filtros, resultados, avaliação da pesquisa, detalhes do processo, comparação visual, seleção de resultados, nova pesquisa e impressão. Fonte: seção “Fluxo 1 (Pesquisa + detalhes + Impressões)”.
+
+1
+
+Webseek — Início
+
+Acesso ao módulo Figurativo pelo “Acesso Rápido” (badge Beta).
+
+Anterioridade
+
+INICIAL
+
+MARCA
+
+PATENTE
+
+TRANSF. DE TECNOLOGIA
+
+PROG. DE COMPUTADOR
+
+JUNTA-SP
+
+Inicial
+
+ÚLTIMOS PROJETOS
+
+INFORMAÇÕES
+
+AVISOS
+
+Última RPI Marcas: 2877
+
+Última RPI Patentes: 2877
+
+Última RPI Desenhos Industriais: 2877
+
+Quantidade de pesquisas no mês atual: 15
+
+Quantidade de reprocessamento de projetos de marcas: Bônus de 2 RPIs
+
+Quantidade de reprocessamento de projetos de patentes: Bônus de 2 RPIs
+
+Seus projetos podem ser reprocessados por 8 (oito) RPIs! Para efetuar a contratação desde
+funcionalidade clique aqui e nosso setor comercial entrará em contato
+
+Acesso Rápido
+
+Figurativo
+
+Beta
+
+Master PI
+
+2
+
+Página inicial do Figurativo
+
+Apresenta as estratégias de busca (Composta, Conceitual, Forma) e o consumo de pesquisas do período.
+
+Home
+
+Busca Figurativa
+
+Free Trial
+
+Webseek Figurativo
+
+LDLabs
+
+John
+
+Página Inicial
+
+Estratégias de Busca
+
+Saiba mais
+
+Similaridade Composta
+
+Busca abrangente que combina análise de conceito e forma para encontrar marcas similares sob múltiplas perspectivas
+
+Similaridade Conceitual
+
+Encontra marcas que representam a mesma ideia visual, independente do estilo de desenho 
+
+Semelhança de Forma
+
+Semelhança de forma: Identifica marcas com estrutura gráfica parecida, focando em contornos, proporções e padrões visuais 
+
+Quantidade de Pesquisas
+
+Encerra em 12/04/26
+
+25
+
+Disponíveis
+
+1% Usado
+
+24 Pesquisas restantes
+
+Utilizada
+
+Pesquisa pelos Elementos Figurativos da Marca
+
+As estratégias de busca por imagem utilizam inteligência artificial para analisar logotipos sob diferentes perspectivas técnicas.  
+
+3
+
+Pesquisa — estado inicial
+
+Upload vazio. Formatos .png/.jpeg/.jpg · recomendado 945×945 px · máx. 5 MB. Ações da imagem e “Pesquisar” desabilitados.
+
+Pesquisa Figurativa
+
+Arraste sua imagem aqui 
+ou faça upload.
+
+Formatos: .png, .jpeg e .jpg 
+
+Recomendado: 945x945 px (300DPI)
+
+Tamanho máximo alterar para 5MB
+
+Upload
+
+Colar
+
+Recortar
+
+Excluir IMG
+
+Estratégia de Busca
+
+-
+
+Opcional
+
+Composta
+
+This is the description area
+
+Visualização Combinada
+
+Tipo 1
+
+NCL
+
+CFE
+
+Exato
+
+RPI (ex.: 1234)
+
+Extinto/Arquivado?
+
+Ambos
+
+Limpar
+
+Pesquisar
+
+Você ainda não realizou nenhuma pesquisa figurativa
+
+Faça sua pesquisa para identificar similaridades visuais com marcas
+ da base consultada e apoiar sua análise técnica de forma mais ágil.
+
+4
+
+Upload de imagem
+
+“Upload” abre o seletor de arquivos do sistema operacional.
+
+unnamed.png
+
+5
+
+Imagem carregada + filtros
+
+Habilita ações da imagem e filtros: Estratégia, Inteligência de Busca, NCL, CFE (Exato), RPI e Extinto/Arquivado.
+
+Inteligência de Busca
+
+Confirmável Múltiplo
+
+32
+
+6
+
+Carregando resultados
+
+Loading na área de resultados após clicar em “Pesquisar”.
+
+7
+
+Resultados + avaliação
+
+“18 Resultados encontrados”. Barra “Qualidade dos resultados” (estrelas) para o usuário avaliar a pesquisa.
+
+Qualidade dos resultados:
+
+Nova pesquisa
+
+18 Resultados encontrados
+
+45 Resultados encontrados
+
+(03) Selecionados
+
+(0) Selecionados
+
+Ver selecionados
+
+Ações
+
+8
+
+Avaliação — comentário
+
+Após escolher as estrelas, abre o campo “Compartilhe conosco” para comentário opcional.
+
+Field Label
+
+Compartilhe conosco
+
+|Insira seu comentário
+
+9
+
+Avaliação — comentário preenchido
+
+Envio habilitado quando o campo possui texto.
+
+Imagens com qualidade ruim|
+
+10
+
+Avaliação enviada
+
+Feedback “Obrigado!” e a barra de avaliação é recolhida.
+
+Obrigado!
+
+11
+
+Grade de resultados
+
+Cards com checkbox de seleção, imagem do resultado e ações (Comparar / Detalhes) no hover.
+
+12
+
+Recortar imagem
+
+Ação “Recortar” abre o editor de recorte da imagem pesquisada, com opção “Resetar”.
+
+Inteligência de Busca
+
+Recortar Imagem
+
+Total
+
+R$ 1.498
+
+Adulto por R$ 749 
+
+Resetar
+
+13
+
+Detalhes do processo
+
+Modal com dados do processo, datas, CFE, procurador, titular, países designados e classes. Ação “Imprimir”.
+
+Detalhes
+
+Red Bull
+
+Processo:
+
+501723569
+
+Datas
+
+Depósito:
+
+06/10/2022
+
+Concessão:
+
+03/12/2024
+
+Vigência:
+
+06/10/2022  até  06/10/2032
+
+Proteção de uso:
+
+03/12/2029
+
+Prorrogação
+
+07/04/2032até06/10/2032
+
+CFE:
+
+1.3.1 • 1.3.8 • 3.4.4 • 3.4.23 • 27.5.1
+
+Procurador:
+
+DAVID DO NASCIMENTO ADVOGADOS ASSOCIADOS
+
+Titular:
+
+RED BULL GMBH (AT)
+
+Protocolo de Madri
+
+IRN:
+
+1723569
+
+Data recebimento INPI: 
+
+06/04/2023
+
+Data de Concessão:
+
+Data de Prorrogação:
+
+06/10/2032
+
+Países Designados
+
+Sigla e Nome
+
+Data
+
+Despacho
+
+Descrição
+
+Complemento
+
+BR (Brasil), CO (Colômbia), MX (México), MY (Malásia), NZ (Nova Zelândia), TR (Turquia), UZ (Uzbequistão), WS (Samoa Ocidental)
+
+07/11/2023
+
+l720-7354
+
+Prorrogação de registro de marca
+
+Protocolo: 12345-07/11/23; Requerente: BEBIDAS FRUKI S/A. (BR/RS); Procurador: JOSÉ ANTONIO ALENCAR BASTOS
+
+2798
+
+20/08/2023
+
+l720-7234
+
+Deferimento da petição - Anotação de alterações de nome, sede ou endereço
+
+Detalhes do despacho: anotada alteração de endereço. Protocolo 8500236598 - 15/08/2023
+
+2774
+
+15/06/2018
+
+l610-4354
+
+Detalhes do despacho: anotada alteração de endereço. Protocolo 8500236598 - 10/06/2018
+
+2477
+
+03/04/2013
+
+l520-10025
+
+Protocolo: 12345-07/03/23; Requerente: BEBIDAS FRUKI S/A. (BR/RS); Procurador: JOSÉ ANTONIO ALENCAR BASTOS
+
+Classes
+
+Código
+
+Específicações
+
+Serviço
+
+Requerente
+
+NCL (11) 01
+
+07/08/2024
+
+340
+
+Produtos químicos para uso industrial; produtos químicos utilizados na ciência; produtos químicos usados em fotografia; produtos químicos utilizados na agricultura, horticultura e silvicultura; resinas artificiais não processadas; plásticos não processados; adubos; composições extintoras de fogo; preparações para a tempera e soldagem; substâncias químicas para conservação de alimentos.
+
+NCL (11) 02
+
+31/08/2023
+
+385
+
+Tintas e lavagens; vernizes; lacas; conservantes contra ferrugem; conservantes contra deterioração de madeira; colorantes; mordentes; resinas naturais brutas; metais em folha para uso em pintura, decoração, impressão e arte; metais em pó para uso em pintura, decoração, impressão e arte; tinturas, colorantes, pigmentos e tintas; colorantes para alimentos e bebidas; tineres e espessantes.
+
+NCL (11) 03
+
+28/07/2023
+
+395
+
+Preparações alvejantes para uso em lavanderia; produtos para lavanderia; preparações para limpar e perfumar; preparações para polimento; preparações para arear; preparações abrasivas; sabonetes não medicinais; produtos de perfumaria; óleos essenciais e extratos aromáticos; cosméticos não medicinais; loções não medicinais para os cabelos; dentífricos não medicinais; produtos de toalete; glitter corporal.
+
+NCL (11) 04
+
+Óleos industriais; graxas industriais; lubrificantes; compostos para absorver, umedecer e aglutinar poeira; combustíveis (incluindo gasolina para motor); iluminantes; velas e pavios para a iluminação; energia elétrica; óleos conservantes para alvenaria ou couro; carburantes.
+
+NCL (11) 05
+
+Produtos farmacêuticos e remédios naturais; preparações medicinais; preparações veterinárias; produtos higiênicos para uso medicinal; alimentos dietéticos adaptados para uso médico; substâncias dietéticas adaptadas para uso medicinal; alimentos dietéticos adaptados para uso veterinário; substâncias dietéticas adaptadas para uso veterinário; alimentos para bebês; suplementos alimentares para humanos; suplementos alimentares para animais; gessos; materiais para curativos; material para obturar dentes.
+
+NCL (11) 06
+
+Metais comuns e suas ligas; materiais de construção metálicos; construções transportáveis de metal; materiais de metal para trilhos de ferrovias; cabos e fios metálicos não elétricos; ferragens de metal, pequenas, para construção; pequenos artigos de ferragens em metal; canos e tubos de metal; cofres-fortes [metálicos ou não metálicos]; minérios; materiais e elementos de edificação e construção, de metal; portas, portões, janelas e persianas para janelas, de metal; estruturas de metal; estátuas de metais comuns.
+
+NCL (11) 07
+
+Máquinas-ferramentas; motores e máquinas [exceto para veículos terrestres]; componentes de acoplamento e transmissão para máquinas [exceto para veículos terrestres]; instrumentos agrícolas, exceto manuais; incubadoras para ovos; máquinas automáticas de venda; equipamentos agrícolas, de terraplanagem, construção e extração e mineração de petróleo e gás; bombas, compressores e ventiladores; robôs industriais; geradores de energia; equipamentos de movimento e manuseio.
+
+NCL (11) 08
+
+Ferramentas e acessórios manuais [operados manualmente]; cutelaria, facas de cozinha e utensílios de corte para uso culinário; armas de mão; máquinas de barbear; instrumentos manuais de higiene e beleza para humanos e animais; armas afiadas e contundentes; ferramentas e acessórios manuais para tratamento de materiais e construção, reparo e manutenção; ferramentas de içamento.
+
+NCL (11) 09
+
+Aparelhos e instrumentos científicos; aparelhos e instrumentos náuticos; aparelhos e instrumentos geodésicos; aparelhos e instrumentos fotográficos; aparelhos e instrumentos cinematográficos; instrumentos e aparelhos ópticos; aparelhos e instrumentos para pesagem; aparelhos e instrumentos de medição; aparelhos e instrumentos de sinalização; aparelhos e instrumentos de verificação [inspeção]; aparelhos e equipamentos salva-vidas; aparelhos e instrumentos de ensino.
+
+NCL (11) 10
+
+Aparelhos e instrumentos cirúrgicos; aparelhos e instrumentos médicos; aparelhos e instrumentos odontológicos; aparelhos e instrumentos veterinários; membros artificiais; olhos artificiais [prótese]; dentes artificiais; artigos ortopédicos; material para sutura; equipamentos de fisioterapia; dispositivos de proteção da audição; mamadeiras e chupetas; produtos sexuais; móveis de uso médico e roupas de cama, equipamentos para transportar pacientes; vestuário, artigos de chapelaria e calçados para fins médicos.
+
+NCL (11) 11
+
+Aparelhos de iluminação; aparelhos de aquecimento; aparelhos para gerar vapor; aparelhos para cozinhar; aparelhos de refrigeração; aparelhos para secagem; aparelhos de ventilação; aparelhos para abastecimento de água; aparelhos para fins sanitários; tubos e instalações para transportar gases de exaustão; aparelhos de bronzeamento; instalações sanitárias; queimadores, caldeiras e aquecedores; refletores de luz.
+
+NCL (11) 12
+
+Veículos e meios de transporte; veículos para locomoção por via terrestre; veículos para locomoção aérea; aparelhos para locomoção por água; peças e acessórios para veículos aéreos e espaciais; peças e acessórios para veículos náuticos; peças e acessórios para veículos terrestres; drones com câmera; helicópteros de controle remoto com câmera embutida; diciclos elétricos, com direção baseada no autoequilíbrio; skates elétricos [hoverboard]; suportes de copos para veículos; veículos anfibios.
+
+NCL (11) 13
+
+Armas de fogo; munições e projéteis; explosivos; fogos de artifício; substâncias e dispositivos explosivos, exceto armas.
+
+NCL (11) 14
+
+Metais preciosos; ligas de metais preciosos; Artigos de joalheria/bijuteria; pedras preciosas; instrumentos de relojoaria; instrumentos cronométricos; pedras preciosas, pérolas e metais preciosos e suas imitações; porta-joias e caixas para relógios de pulso; objetos de arte de metal precioso; chaveiros de bijuteria com acessórios decorativos.
+
+NCL (11) 15
+
+Instrumentos musicais; acessórios musicais, a saber: estantes [pedestais] para partitura, capas para instrumentos musicais, palhetas de guitarra, arcos para instrumentos musicais.
+
+NCL (11) 16
+
+Papel; papelão; material impresso; artigos para encadernação; fotografias; artigos de papelaria; adesivos para uso em artigos de papelaria ou uso doméstico; material artístico; pincéis para artistas; pincéis [brochas] para decoradores; máquinas de escrever [elétricas ou não elétricas]; artigos de escritório [exceto mobiliário]; material de instrução e ensino [exceto aparelhos]; matérias plásticas para embalagem; caracteres de tipografia; clichês para tipografia; obras de arte e estatuetas de papel ou papelão.
+
+NCL (11) 17
+
+Borracha não processada ou semiprocessada; Guta-percha não processada e semiprocessada; Goma não processada e semiprocessada; Amianto não processado e semiprocessado; Mica não processada e semiprocessada; substitutos para borracha, guta-percha, goma e amianto; produtos de plástico semiprocessados.
+
+NCL (11) 18
+
+Couro e imitações de couro; peles de animais, couro; baús [bagagem] e bolsas de viagem; guarda-chuva e guarda-sol; bengalas; chicotes; correias; selaria; bagagem, bolsas, carteiras e bolsas de transporte; carteiras femininas; carteiras de bolso; bolsas de mão; pastas [malas]; mochilas escolares.
+
+NCL (11) 19
+
+Materiais de construção [não metálicos]; canos rígidos não metálicos para construção; construções portáteis não metálicas; monumentos, não metálicos; materiais e elementos de edificação e construção, exceto de metal; portas, portões, janelas e persianas para janelas, não metálicos; estruturas e construções transportáveis não metálicas; piche [breu], alcatrão, betume e asfalto; pedra, rocha, argila e minerais; madeira e madeira artificial; estátuas e obras de arte feitas de materiais como pedra.
+
+NCL (11) 20
+
+Móveis e acessórios, a saber: móveis para quartos, móveis para banheiros, móveis para acampamento, móveis para computador, móveis para salas de jantar, móveis para cozinhas, móveis infláveis, móveis para salas de estar, móveis para escritórios, móveis para pátios, móveis de jardim; espelhos; molduras [encaixilhamentos]; osso não processado ou semiprocessado; chifres não trabalhados ou semitrabalhados; barbatana de baleia não trabalhada ou semitrabalhada; madrepérola.
+
+NCL (11) 21
+
+Utensílios domésticos ou para cozinha; recipientes domésticos ou de cozinha; pentes; esponjas; escovas [exceto pincéis] [brochas]; materiais para fazer escovas; material de limpeza; lã de aço; vidro não trabalhado ou semitrabalhado [exceto vidro utilizado em construção]; objetos de vidro; porcelana; louça de cerâmica; estátuas, bonecos, placas e obras de arte, feitas de materiais como porcelana, terracota ou vidro, incluídos na classe; utensílios de mesa, utensílios de cozinha e recipientes.
+
+NCL (11) 22
+
+Cordas e barbante; materiais de enchimento e estofamento [exceto de papel, papelão, borracha ou plástico]; materiais de fibras têxteis em bruto; tendas; toldos; oleados [tecidos]; redes; velas de navios; sacos; fibras e substitutos de tecidos brutos; fitas não-metálicas para embrulhar ou atar, bolsas e sacos para embalagem, armazenamento e transporte.
+
+NCL (11) 23
+
+Fios e linhas, para uso têxtil.
+
+NCL (11) 24
+
+Têxteis ou substitutos de têxteis; toalhas de mesa; cobertas de cama; tecidos; produtos têxteis e substitutos para produtos têxteis; materiais filtrantes de matérias têxteis.
+
+NCL (11) 26
+
+Renda; bordados; Laços [artigo de armarinho]; trança; botões; botões, colchetes e ilhoses; alfinetes; agulhas; flores artificiais; acessórios para vestuário, artigos de costura e artigos têxteis decorativos, a saber: cordões decorativos, fitas decorativas, caixas de costura, kits de costura, dedais de costura, fechos para vestuário, fechos de correr, remendos para vestuário; enfeites de cabelo, rolos de cabelo, artigos de fixação de cabelo e cabelo falso [postiço]; legumes artificiais; frutas artificiais.
+
+NCL (11) 27
+
+Carpetes, tapetes e esteiras; esteiras; linóleo; revestimentos para pisos existentes; enfeites de parede que não sejam em matérias têxteis; revestimento de assoalho e revestimentos de chão artificiais; revestimentos de parede e teto.
+
+NCL (11) 29
+
+Carne; pescado [não vivo]; frutos do mar e moluscos; aves; carne de caça; extratos de carne; frutas em conserva; verduras e legumes em conserva; frutas congeladas; legumes congelados; frutas secas; verduras e legumes secos; frutas cozidas; verduras e legumes cozidos; geleias; compotas de frutas; compotas; ovos; leite e produtos lácteos; óleos e gorduras comestíveis.
+
+NCL (11) 30
+
+Cafés, chás e cacau e seus substitutos; substitutos de café; arroz tapioca; sagu; farinha; preparações feitas de cereais; pão; pastelaria; produtos de panificação, confeitos; chocolate; cremes de leite e ovo [sobremesas de forno]; gelados comestíveis; açúcares, adoçantes naturais, recheios e coberturas doces, produtos apícolas; mel; melaço; levedura; fermento em pó; sal comestível; temperos; condimentos; flavorizantes para alimentos; mostarda; vinagre; molhos (condimentos); especiarias; gelo.
+
+NCL (11) 31
+
+Produtos agrícolas; culturas agrícolas e aquícolas, produtos hortícolas e florestais; animais vivos, organismos para criação; frutas frescas; vegetais frescos; plantas naturais; flores naturais; Alimentos para animais; malte; grãos crus e não processados; sementes cruas e não processadas; forragem para animais; camas e leitos para animais; plantas de cannabis; cannabis, não processada.
+
+NCL (11) 33
+
+Bebidas alcoólicas [exceto cervejas]; destilados e licores; vinho; sidra; bebidas alcoólicas pré-misturadas; preparações para preparar bebidas alcoólicas; bebidas energéticas com álcool.
+
+NCL (11) 34
+
+Tabaco e produtos de tabaco (incluindo substitutos); artigos para fumantes; fósforos; flavorizantes para fumo; cinzeiros; recipientes para tabaco e umidificadores; isqueiros para fumantes; narguilês.
+
+NCL (11) 35
+
+Propaganda; gestão dos negócios comerciais; administração comercial; funções de escritório; marketing; serviços de promoção; serviços de relações públicas; serviços de demonstração de produtos e exibição de produtos; organização e apresentação de exposições de feira de negócios; serviços de suporte para empresas comerciais; assessoria empresarial; contabilidade, escrituração contábil e auditoria; processamento de dados administrativos; análise de estatísticas de negócios; análise de dados obtidos online.
+
+NCL (11) 36
+
+Seguro; negócios financeiros; negócios monetários; negócios imobiliários; serviços de seguro e avaliações para fins de seguro; serviços de garantia; serviços de penhor; fornecimento de cartões de pré-pago e títulos de valor; serviços de depósito em cofres bancários; serviços bancários e financeiros; serviços de investimento; captação de recursos e patrocínio financeiro; serviços de avaliação; serviços financeiros, a saber: provimento de uma moeda virtual para uso por membros de uma comunidade online via metaverso.
+
+NCL (11) 37
+
+Construção civil; serviços de demolição; aluguel de ferramentas, máquinas e equipamentos para fins de construção, demolição, limpeza e manutenção; extração de recursos naturais; instalação, manutenção e reparo de alarmes, fechaduras e cofres; instalação, manutenção e reparo de hardware de computador e aparelhos de telecomunicação; instalação, manutenção e reparo de HVAC (aquecimento, ventilação e ar-condicionado); manutenção e reparo de edifícios; serviços de postos de gasolina [reabastecimento e manutenção].
+
+NCL (11) 38
+
+Telecomunicações; serviços de radiodifusão; comunicação por computador e acesso à internet; provimento e aluguel de instalações e equipamentos de telecomunicações; streaming [distribuição de dados]; transmissão de vídeo sob demanda; bbs [serviços de telecomunicação]; provimento de salas de bate-papo na internet; provimento de um fórum online para personalização de veículos virtuais; Serviços de difusão que fornecem aos consumidores a oportunidade para fazer parte de concertos em tempo real, competições esportivas e eventos de entretenimento através do metaverso.
+
+NCL (11) 39
+
+Transporte; organização de viagens; embalagem e armazenamento de mercadorias; distribuição por tubulações e cabos; serviços de navegação; transporte e entrega de mercadorias; aluguel de meios de transporte; transporte em viagens e de passageiros; resgate, recuperação, reboque e salvamento; estacionamento e armazenagem de veículos, ancoragem [amarração].
+
+NCL (11) 40
+
+Serviços de fabricação e montagem personalizadas; produção de energia; tratamento de materiais têxteis, couro e pele; reciclagem e tratamento de lixo; impressão e revelação fotográfica e cinematográfica; duplicação de gravações de áudio e vídeo; condicionamento e purificação do ar e da água; abate de animais; tratamento de alimentos e bebidas; produção de cervejas para terceiros.
+
+NCL (11) 42
+
+Serviços científicos e design a esse respeito; serviços tecnológicos e concepção a esse respeito; pesquisa científica; pesquisas tecnológicas; serviços de análise industrial; serviços de pesquisa industrial; concepção e desenvolvimento de hardware de computador; projeto e desenvolvimento de software de computador; serviços de consultoria em TI; engenharia.
+
+NCL (11) 44
+
+Serviços médicos; serviços veterinários; cuidados de higiene e beleza para seres humanos; cuidados de higiene e de beleza para animais; serviços de agricultura, aquicultura, horticultura e silvicultura; serviços de toalete de animais; serviços de assistência à saúde humana; odontologia; serviços farmacêuticos; serviços de oculista; serviços de saúde; arte corporal [serviços de tatuagem]; assessoria alimentar e nutricional.
+
+NCL (11) 45
+
+09/05/2023
+
+3011
+
+Especificação
+
+Serviços jurídicos; serviços de segurança para proteção dos bens e dos indivíduos; serviços de segurança, resgate, proteção e aplicação da lei; serviços astrológicos e espirituais; aluguel de vestuário; serviços de detetive; serviços de encontros; serviços funerários; serviços religiosos; serviços de redes sociais online; serviços de lobby político; serviços de namoro online.
+
+Despachos
+
+RPI
+
+2813
+
+I770
+
+Concessão deregistro emdesignação
+
+SEM COMPLEMENTO
+
+2801
+
+10/09/2024
+
+I768
+
+Deferimento dedesignação
+
+2788
+
+11/06/2024
+
+I772
+
+Exigência demérito emdesignação
+
+Detalhes do despacho: Segundo a seção 5.4.6 doManual de Marcas, nos casos de especificaçãocontendo produtos ou serviços considerados ilícitospela legislação brasileira ou quando houver dúvidaquanto à sua licitude, será formulada exigência a fimde que o requerente esclareça a sua licitude ou paraque os substitua por itens lícitos compatíveis com aclasse reivindicada. Deste modo, esclareça a licitudede todos os produtos consistentes ou relacionados aquaisquer dispositivos eletrônicos para fumar equaisquer acessórios e refis destinados ao uso emqualquer dispositivo eletrônico para fumar, tendo emvista as disposições da Resolução da DiretoriaColegiada da ANVISA - RDC nº 46, de 28 de agosto de2009. Caso estes produtos sejam ilícitos, substitua-ospor produtos correspondentes da respectiva classe ouretire-os da especificação. Observe que, na hipótese desubstituição, o pedido poderá ser republicado.
+
+2763
+
+19/12/2023
+
+I757
+
+Republicação dedesignação
+
+Detalhes do despacho: Pedido republicado tendo emvista omissão de parte da especificação na classe 35, asaber: "serviços de loja de venda a varejo de produtosvirtuais baixáveis, a saber: (...) restaurantes erestaurantes com entrega em domicílio" e "serviços deloja de venda a varejo online de produtos virtuais, asaber: (...) restaurantes e restaurantes com entrega emdomicílio"
+
+2752
+
+03/10/2023
+
+I270-3851
+
+Deferimento dapetição -Nomeação,destituição ousubstituição deprocurador [emprocesso deregistro] (385.1)
+
+Detalhes do despacho: Nomeado procurador David doNascimento Advogados Associados com poderes pararepresentar o titular do processo perante o INPI.Protocolo: 850230419538 - 31/08/2023 - 3851;Requerente: RED BULL GMBH (AT); Procurador: Daviddo Nascimento Advogados Associados;
+
+2745
+
+15/08/2023
+
+I756
+
+Publicação de pedido de registro para oposição(exame formal de Designação concluído)
+
+Citação no complemento de despachos de outros processos
+
+Processo
+
+Marca
+
+Titular
+
+Classe
+
+RPI / Data RPI
+
+929181280
+
+Black Bull
+
+KAIO CESAR VIEIRA ALVES (BR/GO)
+
+NCL(11)05
+
+2881
+
+24/03/2026
+
+I024
+
+Detalhes do despacho: A marca reproduz ou imita marca de alto renome RED BULL (registro de base nº 818725974), sendo, portanto, irregistrável de acordo com o Art. 125 da LPI. Fica ainda consignada, a título de subsídio a eventual recurso, a identificação das seguintes anterioridades, ainda não decididas, consideradas igualmente colidentes com o presente sinal: petições de nulidade administrativa nº 850250038657, vinculada ao registro 922484686; (BLACK BULL CAPS), e nº 850250038638, vinculada ao registro 919840574; (BULL BLACK). A marca reproduz ou imita os seguintes registros de terceiros, sendo, portanto, irregistrável de acordo com o inciso XIX do Art. 124 da LPI: Processo 818338865 ; (RED BULL), Processo 830109447; RED BULL), Processo 821684507; (RED BULL), Processo 824460995; (RED BULL), Processo 818725974 (RED BULL), Processo 501723569 (Red Bull), Processo 919840574 (BULL BLACK), Processo 818338873; (RED BULL), Processo 818339071; (RED BULL), Processo 830376232; (RED BULL ENERGY DRINK), Processo 922484686 (BLACK BULL CAPS), Processo 830109307; (RED BULL), Processo 910487731; (Red Bull), Processo 824866258; (RED BULL), Processo 910486999; (Red Bull), Processo 911013970; (Red Bull), Processo 824366549; (RED BULL), Processo 821583867; (RED BULL ENERGY DRINK), Processo 830109250; (RED BULL) e Processo 824738659; (RED BULL). Especificação alterada com a exclusão dos itens “Adesivos transdérmicos de nicotina para auxílio no abandono do tabagismo; Aminoácido para tratamento de desnutrição ou deficiência proteica; Aminoácidos para uso medicinal; Anabolizante; Barra dietética para suplementação nutricional, para fins medicinais; Chás de ervas para uso medicinal; Chás medicinais; Complemento/suplemento alimentar para uso medicinal; Complemento/suplemento alimentar para uso terapêutico ou dietético; Composição de aminoácido para tratamento de desnutrição ou deficiência proteica; Enzimas para uso medicinal; Erva para banho medicinal; Erva para infusão medicinal; Estatinas [medicamento anticolesterolêmico]; Esteróides; Estimulante da respiração; Medicamento diurético; Medicamento para tratamento hormonal; Medicamento vasoconstritor; Medicamento vasodilatador; Pílulas antioxidantes; Pílulas para emagrecimento; Preparações enzimáticas para uso medicinal; Preparações medicinais para emagrecimento; Suplemento ou complemento alimentar em barra para uso medicinal; Suplemento ou complemento alimentar em líquido para uso medicinal; Suplemento ou complemento alimentar em pó para uso medicinal; Vasodilatador; Vitamina e sais minerais. conforme a solicitação realizada na petição de cumprimento de exigência de mérito nº 850260060321.
+
+Petições
+
+Protocolo
+
+850240398891
+
+RED BULL GMBH
+
+850230419538
+
+301230009035
+
+DIRMA/GABINETE
+
+850230210557
+
+INSTITUTO NACIONAL DA PROPRIEDADE INDUSTRIAL
+
+Imprimir
+
+Fechar
+
+14
+
+Detalhes — tela cheia
+
+Ícone de expandir exibe os detalhes em tela cheia; “X” fecha e retorna aos resultados.
+
+15
+
+Comparação visual
+
+Imagem pesquisada × resultado (nº do processo) lado a lado, com ação “Imprimir”.
+
+Comparação
+
+Imagem Pesquisada
+
+Resultado - 817717129
+
+16
+
+Seleção de resultados
+
+Contador “(03) Selecionados”; habilita “Ver selecionados” e o menu “Ações”.
+
+17
+
+Selecionar todos
+
+Checkbox geral marca todos os resultados da página — “(18) Selecionados”.
+
+(18) Selecionados
+
+18
+
+Lista apenas os itens selecionados; o link alterna para “Ver todos”.
+
+Ver todos
+
+19
+
+“Excluir IMG” limpa a imagem; a última lista de resultados permanece até a nova busca.
+
+20
+
+Upload de nova imagem
+
+Seletor de arquivos aberto sobre a tela com resultados.
+
+21
+
+Nova imagem carregada
+
+Pronta para nova pesquisa; filtros anteriores mantidos.
+
+35
+
+22
+
+Impressão (PDF)
+
+Layouts de impressão de Detalhes e Comparação: cabeçalho “Comparação Figurativa”, data de geração e paginação.
+
+Comparação Figurativa
+
+Análise de Similaridade Visual de Marcas
+
+Comparação Visual
+
+Gerado via Webseek Figurativo em 14/03/2026
+
+Página 1 de 1
+
+Site
+
+https://www.site.com.br
+
+Detalhes da Marca
+
+Registro de Propriedade Industrial
+
+Dados do Processo
+
+Depósito
+
+Prorrogação:
+
+Rec. INPI:
+
+06/10/2022 até 06/10/2032
+
+Página 1 de 4
+
+Classes de Produtos e Serviços
+
+Produtos químicos para uso industrial; produtos químicos utilizados na ciência; produtos químicos usados em fotografia; produtos químicos utilizados na agricultura, horticultura e silvicultura; resinas artificiais não processadas; plásticos não processados; adubos; composições extintoras de fogo.
+
+Tintas e lavagens; vernizes; lacas; conservantes contra ferrugem; conservantes contra deterioração de madeira; colorantes; mordentes; resinas naturais brutas; metais em folha para uso em pintura, decoração, impressão e arte.
+
+Preparações alvejantes para uso em lavanderia; produtos para lavanderia; preparações para limpar e perfumar; preparações para polimento; preparações para arear; preparações abrasivas; sabonetes não medicinais; produtos de perfumaria; óleos essenciais; cosméticos.
+
+Óleos industriais; graxas industriais; lubrificantes; compostos para absorver, umedecer e aglutinar poeira; combustíveis (incluindo gasolina para motor); iluminantes; velas e pavios para a iluminação; energia elétrica.
+
+Produtos farmacêuticos e remédios naturais; preparações medicinais; preparações veterinárias; produtos higiênicos para uso medicinal; alimentos dietéticos adaptados para uso médico; substâncias dietéticas; suplementos alimentares.
+
+Metais comuns e suas ligas; materiais de construção metálicos; construções transportáveis de metal; materiais de metal para trilhos de ferrovias; cabos e fios metálicos não elétricos; ferragens de metal; canos e tubos de metal.
+
+Página 2 de 4
+
+Aparelhos e instrumentos científicos; aparelhos e instrumentos náuticos; geodésicos; fotográficos; cinematográficos; ópticos; de pesagem; de medição; de sinalização; de verificação; salva-vidas e de ensino.
+
+Veículos e meios de transporte; veículos para locomoção por via terrestre; veículos para locomoção aérea; aparelhos para locomoção por água; peças e acessórios para veículos terrestres; drones com câmera.
+
+Papel; papelão; material impresso; artigos para encadernação; fotografias; artigos de papelaria; adesivos para uso em artigos de papelaria; material artístico; pincéis; máquinas de escrever; material de instrução e ensino.
+
+Utensílios domésticos ou para cozinha; recipientes domésticos; pentes; esponjas; escovas; material de limpeza; lã de aço; vidro não trabalhado; objetos de vidro; porcelana; louça de cerâmica; obras de arte.
+
+Cordas e barbante; materiais de enchimento e estofamento; materiais de fibras têxteis em bruto; tendas; toldos; oleados [tecidos]; redes; velas de navios; sacos; fibras e substitutos de tecidos brutos.
+
+Classes de Produtos e Serviços (Continuação)
+
+Carne; pescado [não vivo]; frutos do mar; aves; carne de caça; extratos de carne; frutas em conserva; verduras e legumes em conserva; frutas congeladas; legumes congelados; frutas secas; geleias; compotas; leite.
+
+Página 3 de 4
+
+NCL (11) 32
+
+Cervejas; águas minerais e gasosas; bebidas não alcoólicas; bebidas de frutas e sumos de frutas; xaropes e outras preparações para fabricar bebidas; bebidas energéticas; isotônicos.
+
+Propaganda; gestão dos negócios comerciais; administração comercial; funções de escritório; marketing; serviços de promoção; serviços de relações públicas; demonstração de produtos; exposições comerciais.
+
+Serviços de fabricação e montagem personalizadas; produção de energia; tratamento de materiais têxteis, couro e pele; reciclagem e tratamento de lixo; impressão; duplicação de gravações; purificação do ar.
+
+Serviços científicos e design; serviços tecnológicos; pesquisa científica; pesquisas tecnológicas; serviços de análise industrial; concepção e desenvolvimento de hardware e software; consultoria em TI.
+
+Serviços jurídicos; serviços de segurança; proteção e aplicação da lei; aluguel de vestuário; serviços de encontros; serviços funerários; serviços religiosos; redes sociais online; lobby político.
+
+Histórico de Petições Recentes
+
+Nomeação de procurador
+
+Este documento é uma representação impressa dos dados oficiais contidos no sistema de consulta figurativa.
+
+Documento Gerado Eletronicamente - Sem validade de certidão oficial.
+
+Página 4 de 4
+
+/ 4
+
+FLUXO 02
+
+Histórico de Pesquisa (Logs) — Usuário Master/Admin
+
+Acesso: menu do usuário (dropdown no header) → Logs. O Master/Admin visualiza o histórico de todos os usuários da conta e pode filtrar por Período, Usuário, Avaliação e Ação. Fonte: seção “Logs Master”.
+
+Acessando Log:
+
+Usuário \/
+Dropdown
+Logs
+
+TXT
+
+Filtros de Pesquisa:
+
+Período quando selecionado maior do que 1 ano, o usuário terá um retorno “Permitido o intervalo máximo de 1(um) ano.”
+
+Tabela de Log:
+
+Imagem
+Data / Hora
+Usuário
+Ação
+Estratégia / Inteligência
+Avaliação
+Descrição
+
+As avaliações se comportam como hyperlinks → Só gera hyperlink e abre a modal caso o texto não caiba na tabela.
+
+Descrição:
+3 linhas onde da para ler tudo.  Quando for Exportação, descrição é mais simplificada.
+
+Detalhes da avaliação:
+
+Botão de copiar texto caso queira copiar a avaliação em questão.
+
+Estado inicial (vazio)
+
+Filtros abertos sem parâmetros. “Sem informações para exibir” orienta a definir usuário ou período.
+
+Histórico de Pesquisa
+
+Buscar por Descrição
+
+Buscar
+
+Filtros de Pesquisa
+
+Período
+
+DD / MM / AAAA
+
+Button
+
+Até
+
+Usuário
+
+|
+
+Avaliação
+
+Todas
+
+Ação
+
+Fonte de busca
+
+Google Search
+
+Resultados Orgânicos
+
+Google Shopping
+
+Produtos e preços
+
+YouTube
+
+Vídeos e canais
+
+Twitter / X
+
+Tweets e menções
+
+Facebook
+
+Posts e páginas
+
+Instagram
+
+Fotos e perfis
+
+Google News
+
+Notícias recentes
+
+Google Trends
+
+Evolução do interesse
+
+Amazon
+
+Produtos e reviews
+
+Fonte de Busca
+
+Sem informações para exibir
+
+Para visualizar o histórico, defina um usuário  ou período desejado em filtros.
+
+Período preenchido
+
+Datas DD/MM/AAAA com seletor de calendário; “Pesquisar” habilitado.
+
+01 / 01 / 2026
+
+03 / 05 / 2026
+
+Carregando
+
+“Carregando Informações” enquanto a busca é processada; filtros recolhidos.
+
+Carregando Informações
+
+Por favor, aguarde um momento enquanto nosso sistema realiza 
+a busca com base nos filtros de pesquisa.
+
+Tabela de histórico
+
+Colunas: Imagem, Data/Hora, Usuário, Ação, Estratégia/Inteligência, Avaliação e Descrição.
+
+Imagem
+
+Data / Hora
+
+Estratégia / Inteligência
+
+01/05/2026  17:11
+
+Pesquisa
+
+Ver Detalhes
+
+Excelentes resultados
+
+Marcas - Pesquisa - Classe: 32 (Afinidade: Sim / Correspondência Não) - CFE: 1234 - RPI: 8123 - Extinto/Arquivado: Somente arquivados
+
+30/04/2026  15:07
+
+Antonio
+
+Forma
+
+A busca por forma no Webseek figurativo não atendeu às expectativas da jornada neste cenário. A intenção ao utilizar o recurso era receber um retorno puramente baseado em similaridade geométrica e de contornos. Contudo, a ordenação dos resultados falhou. Em vez de exibir itens com silhuetas correspondentes, o sistema apresentou a imagem de um avião logo no topo da tabela. Esse comportamento aponta uma lacuna clara no reconhecimento de padrões visuais, gerando frustração no uso. Para que o produto entregue real valor e a interface cumpra seu papel, o algoritmo precisa refinar o peso dado às formas da imagem original, evitando que elementos sem correlação visual quebrem a experiência.
+
+Marcas - Pesquisa - Classe: 35 (Afinidade: Sim / Correspondência Não) - CFE: 1234 - RPI: 8123 - Extinto/Arquivado: Somente arquivados
+
+29/04/2026  16:33
+
+Exportação
+
+Marcas - Pesquisa - Download Excel
+
+12/04/2026  09:21
+
+Pegasus
+
+Conceitual
+
+Gostei demais dos resultados, o que impactou foi uma lentidão momentânea.
+
+01/04/2026  14:52
+
+N/A
+
+Marcas - Pesquisa - Download PDF
+
+10/03/2026  12:11
+
+Octavius
+
+Peso Prioritário
+
+ 
+
+Marcas - Pesquisa - Classe: 30 (Afinidade: Sim / Correspondência Não) - CFE: 1234 - RPI: 8123 - Extinto/Arquivado: Somente arquivados
+
+05/03/2026  09:21
+
+Peter
+
+Marcas - Pesquisa - Versão para Impressão
+
+01/02/2026  16:11
+
+Ben
+
+Não foi possível carregar algumas imagens devido a um erro inesperado segundo o sistema.
+
+Filtros reabertos
+
+Expandir “Filtros de Pesquisa” mantém a tabela visível abaixo.
+
+Alteração de período
+
+Novo período informado; “Limpar” e “Pesquisar” habilitados.
+
+01 / 05 / 2024
+
+Filtro por usuário
+
+Dropdown Usuário (exclusivo Master/Admin) restringe o histórico a um usuário.
+
+Erro — período maior que 1 ano
+
+Mensagem “Permitido o intervalo máximo de 1(um) ano.” e campo em estado de erro; “Pesquisar” bloqueado.
+
+Permitido o intervalo máximo de 1(um) ano.
+
+01 / 08 / 2025
+
+Período corrigido
+
+Intervalo válido remove o erro e libera a pesquisa.
+
+01 / 03 / 2026
+
+Resultado filtrado
+
+Tabela exibe apenas os registros que atendem aos filtros.
+
+Filtros abertos com resultado
+
+O usuário pode refinar ou limpar os filtros sem perder a tabela.
+
+Detalhes da avaliação
+
+Avaliação truncada vira hyperlink e abre modal com texto completo, estrelas e botão Copiar.
+
+Usuário:
+
+Data:
+
+01/05/2026 · 10:11
+
+FLUXO 03
+
+Histórico de Pesquisa (Logs) — Usuário dependente
+
+Mesma estrutura do fluxo 02, sem o filtro “Usuário”: o usuário dependente vê somente o próprio histórico (filtros Período, Avaliação e Ação). Fonte: seção “Logs Usuário”.
+
+Usuário “depentende” não poderá ver os demais históricos de outros usuários.
+
+Filtros sem “Usuário”. Mensagem “Sem informações para exibir” orienta a definir um período.
+
+Para visualizar o histórico, defina um período desejado em filtros.
+
+Ações desabilitadas
+
+Sem parâmetros preenchidos, “Limpar” e “Pesquisar” permanecem desabilitados.
+
+Datas DD/MM/AAAA preenchidas habilitam “Pesquisar”.
+
+Registros do próprio usuário com Ação, Estratégia/Inteligência, Avaliação e Descrição.
+
+Expandir “Filtros de Pesquisa” mantém a tabela visível.
+
+Novo período
+
+Período alterado com “Limpar” e “Pesquisar” habilitados.
+
+“Permitido o intervalo máximo de 1(um) ano.”; campo em erro e “Pesquisar” bloqueado.
+
+01 / 05 / 2026
+
+Tabela atualizada conforme os filtros; filtros recolhidos.
+
+Usuário pode refinar ou limpar os filtros sem perder a tabela.
+
+Filtros limpos
+
+Após “Limpar”, campos voltam ao padrão e a tabela é mantida até nova pesquisa.
+
+COMPONENTES
+
+Inventário de componentes e variantes
+
+Instâncias dos componentes da página “💻 DS” usados nas telas do Figurativo, com todas as variantes/estados. Componentes base (botões, inputs, checkbox, divider, tooltip, ícones Phosphor) vêm da biblioteca do DS e não são repetidos aqui. Cada card indica onde o componente é usado.
+
+A · Estrutura e navegação
+
+Header, menu lateral e cabeçalhos de página compartilhados por todas as telas do módulo.
+
+Webseek - Header
+
+Header global do Webseek com troca de módulo (Figurativo), usuário e badge do plano. Variante “Auditoria Sair” para sessões de auditoria.
+
+Default
+
+Auditoria Sair
+
+B
+
+Logs
+
+Terciary text
+
+Sair
+
+Apol - Menu Lateral
+
+Menu lateral do APOL/Webseek. Estados aberto/fechado × página ativa (Home, Pesquisa, Default).
+
+State=Open - Home
+
+State=Open - Default
+
+State=Open - Pesquisa
+
+State=Close - Home
+
+State=Close - Default
+
+State=Close - Pesquisa
+
+Apol - Menu Lateral - Hover 01 - Master
+
+Menu lateral — hover do item no perfil Master.
+
+State=State4
+
+Header_Pesquisa_Figurativa
+
+Cabeçalho da página “Pesquisa Figurativa”.
+
+Header_Logs
+
+Cabeçalho da página “Histórico de Pesquisa” (Logs).
+
+Logs de Pesquisa
+
+B · Pesquisa — upload e filtros
+
+Painel esquerdo da Pesquisa Figurativa: área de imagem e filtros da busca.
+
+Inserir_img
+
+Área de upload da imagem. Default (arraste/upload) e Preenchido (preview + ações Upload, Colar, Recortar, Excluir, Pesquisar).
+
+Preenchido
+
+Estrategia_de_busca_V1
+
+Bloco de filtros completo. Default (sem imagem) e Preenchido (com Inteligência de Busca).
+
+Dropdown_estrategia_V1
+
+Dropdown “Estratégia de Busca”: Composta, Conceitual, Forma. Ícone (i) abre modal explicativo.
+
+Open
+
+List item
+
+Dropdown_ visualização_combinada_V1
+
+Dropdown “Inteligência de Busca” (ex.: Confirmável Múltiplo) — exibido após upload.
+
+Pontuação Equilibrada
+
+Classificação Inteligente
+
+Dropdown_NCL_V1
+
+Dropdown “NCL” (classe). Estados default, selecionado e aberto.
+
+selecionado
+
+|Selecionar
+
+01
+
+02
+
+03
+
+04
+
+05
+
+06
+
+07
+
+08
+
+09
+
+23
+
+24
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+33
+
+34
+
+36
+
+37
+
+38
+
+39
+
+40
+
+41
+
+42
+
+43
+
+44
+
+45
+
+Variant4
+
+Dropdown_ CFE_V1
+
+Campo/dropdown “CFE” com opção “Exato”.
+
+|Digitar
+
+Dropdown_ RPI_V1
+
+Campo “RPI” (ex.: 1234).
+
+Dropdown_ExtintoArquivado_V1
+
+Dropdown “Extinto/Arquivado?” (Sim, Não, Ambos).
+
+Não
+
+Somente arquivados
+
+Somente extintos
+
+Options Dots_V1
+
+Menu de opções (⋯) ao lado do NCL: Afinidade e Correspondência (Sim/Não).
+
+Hover
+
+Opened
+
+Afinidade
+
+Correspondência
+
+AfiSim
+
+CorSim
+
+Afi&CorSim
+
+C · Resultados, avaliação e detalhes
+
+Área de resultados, seleção, avaliação da pesquisa e blocos do modal de Detalhes.
+
+Resultado
+
+Área de resultados: Default (vazio), Loading, Com resultado (grade) e Selecionados.
+
+Loading
+
+Com resultado
+
+Selecionados
+
+Acao_selecionar
+
+Barra de ações dos resultados: contador, “Ver selecionados” / “Ver todos” e menu Ações.
+
+17 Resultados encontrados
+
+CTA_Comparar_sem_link
+
+CTA de comparar no card de resultado, com e sem tooltip.
+
+Sem tooltip
+
+Com tooltip
+
+Avaliação por estrelas (Qualidade dos resultados): default, hover e selecionado de 1 a 5 estrelas.
+
+State=default, Amount=None
+
+State=hover, Amount=1 star
+
+State=hover, Amount=2 stars
+
+State=hover, Amount=3 stars
+
+State=hover, Amount=4 stars
+
+State=hover, Amount=5 stars
+
+State=Selected, Amount=1 star
+
+State=Selected, Amount=2 stars
+
+State=Selected, Amount=3 stars
+
+State=Selected, Amount=4 stars
+
+State=Selected, Amount=5 stars
+
+State=default, Amount=hover, Color=Gold
+
+State=hover, Amount=1 star, Color=Gold
+
+State=hover, Amount=2 star, Color=Gold
+
+State=hover, Amount=3 star, Color=Gold
+
+State=hover, Amount=4 star, Color=Gold
+
+State=hover, Amount=5 star, Color=Gold
+
+State=Selected, Amount=1 star, Color=Gold
+
+State=Selected, Amount=2 star, Color=Gold
+
+State=Selected, Amount=3 star, Color=Gold
+
+State=Selected, Amount=4 star, Color=Gold
+
+State=Selected, Amount=5 star, Color=Gold
+
+Bloco “Despachos” do modal Detalhes (acordeão fechado/aberto).
+
+Closed
+
+Citação
+
+Bloco “Citação” do modal Detalhes (acordeão fechado/aberto).
+
+Bloco “Petições” do modal Detalhes.
+
+Variant2
+
+D · Histórico de Pesquisa (Logs)
+
+Filtros, tabela e badges da página de Histórico.
+
+Filter 2 - Log
+
+Filtros de Pesquisa do Log: Default (recolhido), open e open-error (período maior que 1 ano).
+
+open
+
+open-error
+
+Dashboard_Listagem
+
+Tabela de histórico: Default (vazio), filled e BasicUser (usuário dependente, sem filtro/coluna de outros usuários).
+
+Para visualizar os logs, defina um usuário  ou período desejado em filtros.
+
+filled
+
+BasicUser
+
+Ação-badge
+
+Badge da coluna Ação: Pesquisa e Exportação.
+
+Estrategia-Badge
+
+Badge da coluna Estratégia: Composta, Conceitual e Forma.
+
+E · Modais, dropdowns e overlays
+
+Elementos sobrepostos às telas, extraídos da área de apoio do protótipo.
+
+Modal Estratégia de Busca
+
+Aberto pelo ícone (i) do dropdown Estratégia. Explica Composta, Conceitual e Forma.
+
+As estratégias de busca funcionam como "lentes" diferentes para a inteligência artificial. Cada uma prioriza um aspecto para garantir que você não ignore marcas conflitantes. Abaixo os detalhes de cada abordagem:
+
+Busca abrangente que combina análise de conceito e forma para encontrar marcas similares sob múltiplas perspectivas. 
+Como funciona: Combina três tipos de análise simultaneamente: reconhecimento de conceitos, identificação de formas e detecção de padrões visuais. 
+O que faz: Analisa tanto o significado visual da marca quanto sua estrutura gráfica. É como ter três especialistas analisando a mesma marca. 
+Vantagem: Maior cobertura e menor chance de perder marcas relevantes. Encontra similaridades por conceito, forma ou ambos. 
+Resultado: Lista abrangente de marcas similares por diferentes razões: mesma ideia visual, mesma estrutura ou combinação de ambos. 
+Ideal para: Análises completas de anterioridade, quando você quer garantir que nenhuma marca conflitante passe despercebida. 
+
+Encontra marcas que representam a mesma ideia visual, independente do estilo de desenho. 
+Como funciona: Utiliza IA treinada para entender o significado visual das imagens, identificando o que a marca representa (animal, objeto, símbolo). 
+O que faz: Encontra marcas com o mesmo conceito, mesmo que o estilo seja diferente. Um leão realista encontrará outros leões estilizados ou minimalistas. 
+Vantagem: Captura similaridade semântica que uma busca puramente visual poderia perder. Marcas diferentes graficamente, mas com mesmo significado. 
+Resultado: Marcas que compartilham o mesmo tema visual, organizadas por proximidade conceitual. 
+Ideal para: Verificar se o conceito da sua marca já está sendo usado, especialmente para marcas figurativas reconhecíveis (animais, objetos). 
+
+Semelhança de Forma 
+
+Identifica marcas com estrutura gráfica parecida, focando em contornos, proporções e padrões visuais.  
+Como funciona: Analisa a estrutura visual da imagem: contornos, proporções, cores, disposição dos elementos e padrões gráficos. 
+O que faz: Encontra marcas com estrutura parecida, mesmo que representem coisas diferentes. Um círculo com três linhas encontrará formas similares. 
+Vantagem: Detecta similaridades visuais que podem causar confusão, mesmo entre marcas de conceitos distintos. Foca na impressão visual. 
+Resultado: Marcas com aparência similar, que poderiam ser confundidas à primeira vista ou em aplicações reduzidas. 
+Ideal para: Avaliar se a forma da sua marca é única. Essencial para marcas abstratas, geométricas ou estilizadas. 
+
+Modal Inteligência de Busca
+
+Aberto pelo ícone (i) de Inteligência de Busca.
+
+Como o Webseek encontra resultados tão precisos?
+
+O Webseek utiliza múltiplos especialistas visuais — cada um treinado para reconhecer aspectos diferentes de uma imagem, como formas, cores, texturas, tipografia e composição geral. 
+Em vez de confiar em uma única opinião, nosso sistema combina a análise de todos os especialistas usando algoritmos proprietários. É como ter uma equipe de designers experientes analisando cada imagem sob ângulos diferentes e chegando a um consenso. 
+Você pode escolher a estratégia de combinação que melhor se encaixa na sua necessidade:
+
+Dá prioridade máxima a resultados que foram encontrados por vários especialistas ao mesmo tempo. Se todos concordam, é porque é bom.
+
+Ideal para: Alta precisão e menos ruído.
+
+Normaliza e calcula a média das notas de cada especialista. Garante que nenhum especialista domine sozinho o resultado.
+
+Ideal para: Resultados com maior nota geral.
+
+Aplica pesos de prioridade a cada especialista, destacando quem tem mais competência para aquele tipo de busca.
+
+Ideal para: Buscas direcionadas a um estilo específico.
+
+Combina a posição de cada resultado nos rankings dos especialistas. Quanto melhor posicionado em mais especialistas, maior a relevância final.
+
+Ideal para: Buscas gerais e equilibradas.
+
+Termos e condições
+
+Exibido no primeiro acesso ao módulo (Beta); aceite obrigatório.
+
+Leia atentamente os termos e condições abaixo.
+
+Política de Transparência e Uso de Dados
+
+Ao clicar em "Aceito", você declara estar ciente e concordar com as seguintes condições:
+
+Natureza Experimental (Transparência) Você compreende que esta é uma versão Beta experimental. O sistema utiliza Inteligência Artificial e pode apresentar instabilidades ou fornecer respostas imprecisas/incompletas. O objetivo deste período é coletar feedbacks para o aprimoramento da tecnologia.
+
+Limitação de Responsabilidade A LDSOFT não se responsabiliza por quaisquer danos diretos, indiretos ou decisões tomadas com base nas saídas geradas pela IA. O conteúdo fornecido tem caráter meramente informativo e deve ser revisado por um profissional humano antes de qualquer aplicação prática.
+
+Uso de Dados e Privacidade (LGPD) Respeitamos a sua privacidade de acordo com a LGPD (Lei 13.709/18). Os dados inseridos são coletados para processar suas solicitações. Não insira informações sensíveis, dados pessoais de terceiros ou segredos comerciais que não deseje compartilhar.
+
+Autorização para Melhoria do Algoritmo Você autoriza expressamente a LDSOFT a utilizar as interações e feedbacks realizados durante o Beta para o treinamento, refinamento e melhoria técnica do nosso algoritmo, garantindo que tais dados sejam tratados de forma segura e, sempre que possível, anonimizada.
+
+Consentimento Formal Seu acesso é condicionado ao seu consentimento livre, informado e inequívoco. Você pode revogar este consentimento a qualquer momento, o que implicará na interrupção do acesso à ferramenta Beta.
+
+Mensagem
+
+Todas as informações estão seguras conosco.
+
+Link
+
+Visualizar imagem
+
+Zoom da imagem do resultado (lupa nos Detalhes).
+
+Visualizar Imagem
+
+Dropdown de módulos
+
+Troca de módulo pelo header (Webseek, Figurativo, demais módulos).
+
+Jurisprudência
+
+Empresas
+
+Novo!
+
+Radar
+
+Dropdown do usuário
+
+Menu do usuário no header; dá acesso a “Logs”.
+
+Hebert
+
+Cliente
+
+Probabilidade de Deferimento
+
+Situação (Ativo/Inativo/Arquivado)
+
+Dropdown select
+
+Lista de opções genérica dos filtros.
+
+Menu Ações (resultados)
+
+Ações sobre os resultados selecionados.
+
+Exportar para PDF
+
+Exportar para Excel
+
+Dropdown Ação (Log)
+
+Filtro Ação: Todas, Pesquisa, Exportação.
+
+Dropdown Ação — largo
+
+Variação larga do filtro Ação.
+
+Dropdown Avaliação (Log)
+
+Filtro Avaliação por estrelas.
+
+1 Estrela
+
+2 Estrelas
+
+3 Estrelas
+
+Dropdown Avaliação — largo
+
+Variação larga do filtro Avaliação.
+
+Ordenar / filtros
+
+Ordenação dos resultados.
+
+Ordenar Por
+
+Relevância
+
+Ordenação
+
+Decrescente
+
+Reset
+
+Aplicar
+
+Loading (spinner)
+
+Animação de carregamento usada na pesquisa e no histórico.
+
+FUNDAMENTOS
+
+Cores e tipografia
+
+Valores extraídos das telas do protótipo (o arquivo não possui variáveis nem estilos locais publicados). Recomenda-se mapear estes valores para tokens do front-end.
+
+Paleta
+
+Marca / ação
+
+Primária
+
+#035C7A
+
+Botões primários, badges, links de ação
+
+Azul link
+
+#0059AD
+
+Links e ícones informativos
+
+Azul escuro
+
+#004585
+
+Hover/pressed
+
+Azul médio
+
+#3E85B5
+
+Ícones e destaques
+
+Azul suave
+
+#E9FAFF
+
+Fundo de destaque/info
+
+Texto
+
+Título
+
+#000014
+
+Títulos de página e modais
+
+Texto principal
+
+#2D2D33
+
+Corpo de texto
+
+Texto secundário
+
+#51515C
+
+Descrições, ícones
+
+Label / placeholder
+
+#78788C
+
+Labels de campo, placeholders
+
+Desabilitado
+
+#BDBDD0
+
+Texto e ícones desabilitados
+
+Superfícies e bordas
+
+Branco
+
+#FFFFFF
+
+Cards, modais, campos
+
+Fundo da página
+
+#F7F7F7
+
+Background geral
+
+Superfície
+
+#F0F5FA
+
+Área de upload, cabeçalho de tabela, chips
+
+Borda
+
+#DDDDEB
+
+Bordas de campos e cards
+
+Divisor
+
+#CECEE0
+
+Divider
+
+Header escuro
+
+#001A33
+
+Menu lateral / badge Master
+
+Feedback
+
+Erro
+
+#D22D37
+
+Mensagens e bordas de erro (ex.: período > 1 ano)
+
+Estrela / avaliação
+
+#D3800C
+
+Estrelas selecionadas
+
+Overlay
+
+#3A3A48
+
+Fundo escurecido atrás de modais (com opacidade)
+
+Tipografia — família Inter
+
+Título de página
+
+Inter Bold · 22px · line-height 140%
+
+Pesquisa Figurativa / Histórico de Pesquisa
+
+(exemplo em 2,5×)
+
+Título de seção / modal
+
+Inter Semi Bold · 16px · line-height 140%
+
+Detalhes · Filtros de Pesquisa
+
+Botão / destaque
+
+Inter Semi Bold · 14px · line-height 140%
+
+Pesquisar · Imprimir
+
+Corpo
+
+Inter Regular · 14px · line-height 140%
+
+Faça sua pesquisa para identificar similaridades visuais…
+
+Label de campo
+
+Inter Medium · 12px · line-height 140%
+
+Estratégia de Busca · NCL · Período
+
+Texto auxiliar / tabela
+
+Inter Regular · 12px · line-height 140%
+
+Formatos: .png, .jpeg e .jpg · 01/05/2026 17:11
+
+Exceções observadas: Roboto SemiBold/Bold 12 (badge “Master PI” do header) e Nunito Regular 18 (logotipo/assinatura). Ícones: Phosphor (biblioteca do DS).
+
+REGRAS
+
+Regras de negócio, estados e validações
+
+Comportamentos que não ficam evidentes apenas pelas telas. As referências “F1-n”, “F2-n” e “F3-n” apontam para a etapa n dos fluxos 01, 02 e 03.
+
+F1-3 a F1-5, F1-12, F1-19
+
+Formatos aceitos: .png, .jpeg e .jpg.
+
+Recomendado: 945 × 945 px (300 DPI). Tamanho máximo: 5 MB — ajustar a copy do protótipo (“Tamanho máximo alterar para 5MB”).
+
+Entradas: arrastar e soltar, botão Upload (seletor do SO) ou Colar (área de transferência).
+
+Sem imagem: Recortar, Excluir IMG e Pesquisar ficam desabilitados.
+
+Recortar abre o editor de recorte com “Resetar”; Excluir IMG limpa a imagem e mantém a última lista de resultados.
+
+Filtros da pesquisa
+
+F1-5
+
+Estratégia de Busca: Composta (padrão), Conceitual ou Forma; ícone (i) abre o modal explicativo.
+
+Inteligência de Busca (ex.: Confirmável Múltiplo) aparece após o upload; ícone (i) abre modal.
+
+NCL (dropdown) + menu ⋯ com Afinidade e Correspondência (Sim/Não).
+
+CFE com checkbox “Exato”; RPI numérico (ex.: 1234); Extinto/Arquivado? com padrão “Ambos”.
+
+“Limpar” restaura os valores padrão; “Pesquisar” exige imagem carregada.
+
+Resultados e seleção
+
+F1-6, F1-7, F1-11, F1-16 a F1-18
+
+Estados da área: vazio (ilustração + texto de orientação), loading e com resultado.
+
+Contador “N Resultados encontrados”.
+
+Checkbox por card atualiza “(N) Selecionados”; checkbox geral seleciona todos.
+
+“Ver selecionados” filtra a grade e alterna para “Ver todos”.
+
+Menu “Ações” habilitado somente com ao menos 1 item selecionado.
+
+Avaliação da pesquisa
+
+F1-7 a F1-10
+
+Barra “Qualidade dos resultados” com 1 a 5 estrelas; hover preenche até a estrela apontada.
+
+Ao selecionar, abre “Compartilhe conosco” para comentário opcional; envio habilitado com texto.
+
+Após enviar: feedback “Obrigado!” e a barra é recolhida.
+
+A avaliação (estrelas + comentário) é registrada no Histórico, coluna Avaliação.
+
+Detalhes, comparação e impressão
+
+F1-13 a F1-15, F1-22
+
+Detalhes (modal): processo, datas, prorrogação, CFE, procurador, titular, Protocolo de Madri, países designados, classes, despachos, citação e petições.
+
+Ícone expandir → tela cheia; lupa → Visualizar imagem; X fecha e volta aos resultados.
+
+Comparação: imagem pesquisada × resultado (nº do processo), lado a lado.
+
+Imprimir gera PDF com cabeçalho, “Gerado via Webseek Figurativo em DD/MM/AAAA” e “Página X de Y”.
+
+Cenário estressado: layouts devem suportar textos longos com quebra de linha.
+
+Cota de pesquisas
+
+F1-2
+
+Página inicial exibe pesquisas disponíveis, utilizadas, % usado e data de encerramento do ciclo.
+
+Comportamento ao atingir o limite da cota: validar com PO.
+
+Histórico — filtros
+
+F2-1 a F2-11 · F3-1 a F3-12
+
+Período (DD/MM/AAAA com calendário): intervalo máximo de 1 ano. Acima disso: “Permitido o intervalo máximo de 1(um) ano.”, campo em erro e Pesquisar bloqueado.
+
+Usuário: exibido somente para Master/Admin.
+
+Avaliação: Todas ou 1 a 5 estrelas. Ação: Todas, Pesquisa ou Exportação.
+
+Sem parâmetros, Limpar e Pesquisar ficam desabilitados.
+
+Após pesquisar, o painel de filtros é recolhido; pode ser reaberto sem perder a tabela.
+
+Histórico — tabela
+
+F2-4, F2-12
+
+Avaliação vira hyperlink apenas quando o texto não cabe na célula → abre “Detalhes da avaliação” com botão Copiar.
+
+Descrição: até 3 linhas legíveis. Para Exportação, a descrição é simplificada.
+
+Estados: vazio (“Sem informações para exibir”) e loading (“Carregando Informações”).
+
+Permissões e acesso
+
+F2 · F3
+
+Acesso ao Histórico: dropdown do usuário no header → Logs.
+
+Master/Admin: vê o histórico de todos os usuários da conta.
+
+Usuário dependente: vê apenas o próprio histórico; sem filtro Usuário (Dashboard_Listagem = BasicUser).
+
+Troca de módulo pelo Dropdown de módulos no header (Webseek ↔ Figurativo).

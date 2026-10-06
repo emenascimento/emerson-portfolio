@@ -1,9 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, ReactNode } from "react";
 import { IconX, IconDownload } from "@tabler/icons-react";
 
-export function ResumeModal() {
+interface ResumeModalProps {
+  className?: string;
+  children?: ReactNode;
+}
+
+export function ResumeModal({ className, children }: ResumeModalProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -11,9 +16,9 @@ export function ResumeModal() {
       {/* Botão no Rodapé que abre a Modal */}
       <button 
         onClick={() => setIsOpen(true)}
-        className="text-zinc-700 dark:text-zinc-300 hover:text-[#155dfc] dark:hover:text-[#155dfc] cursor-pointer transition-colors"
+        className={className || "text-zinc-700 dark:text-zinc-300 hover:text-[#155dfc] dark:hover:text-[#155dfc] cursor-pointer transition-colors"}
       >
-        Currículo
+        {children || "Currículo"}
       </button>
 
       {/* Estrutura da Modal */}

@@ -4,6 +4,7 @@ import { ThemeToggle } from '../components/ThemeToggle';
 import { ScrollToTop } from '../components/ScrollToTop';
 import { ResumeModal } from '../components/ResumeModal';
 import { IconArrowLeft, IconArrowUpRight } from '@tabler/icons-react';
+import { ZoomableImage } from '../components/ZoomableImage';
 
 export default function CasePortfolio() {
   return (
@@ -12,16 +13,35 @@ export default function CasePortfolio() {
       <main className="pb-0">
         
         {/* Cabeçalho do Case */}
-        <header className="pt-16 sm:pt-24 pb-12 px-6 max-w-4xl mx-auto text-center">
+        <header className="pt-16 sm:pt-24 pb-12 px-6 max-w-4xl mx-auto text-center flex flex-col items-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 text-xs font-bold uppercase tracking-wider mb-6">
             Este portfólio é um produto
           </div>
-          <h1 className="font-heading text-4xl sm:text-6xl font-extrabold tracking-tighter text-zinc-900 dark:text-zinc-50 mb-6 leading-[1.1]">
+          <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tighter text-zinc-900 dark:text-zinc-50 mb-6 leading-[1.1] max-w-4xl">
             O Código como Design: Construindo o portfólio como produto
           </h1>
-          <p className="text-lg sm:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-3xl mx-auto">
             A decisão de abandonar plataformas No-Code e assumir o controle total da arquitetura, transformando o portfólio em uma prova real de habilidades entre Design e Engenharia.
           </p>
+
+          <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 mt-10 max-w-4xl mx-auto">
+            <div className="text-center">
+              <p className="text-sm font-bold text-zinc-900 dark:text-zinc-50 mb-1">Papel</p>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400">Design Engineer</p>
+            </div>
+            <div className="text-center">
+              <p className="text-sm font-bold text-zinc-900 dark:text-zinc-50 mb-1">Produto</p>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400">Portfólio (Web)</p>
+            </div>
+            <div className="text-center">
+              <p className="text-sm font-bold text-zinc-900 dark:text-zinc-50 mb-1">IA Utilizada</p>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400">Cursor / Claude 3.5</p>
+            </div>
+            <div className="text-center">
+              <p className="text-sm font-bold text-zinc-900 dark:text-zinc-50 mb-1">Status</p>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400">Em Produção</p>
+            </div>
+          </div>
         </header>
 
         {/* Imagem Hero do Case */}
@@ -67,39 +87,49 @@ export default function CasePortfolio() {
           </div>
         </section>
 
-        {/* Primeira Parte do Artigo (Sem prose, idêntico ao Sobre mim da Home) */}
-        <div className="max-w-3xl mx-auto px-6 space-y-20 mb-24">
+        {/* Primeira Parte do Artigo */}
+        <div className="max-w-7xl mx-auto px-6 mb-24 space-y-20">
           
-          <section>
-            <h2 className="font-heading text-4xl sm:text-5xl font-extrabold tracking-tighter text-zinc-900 dark:text-zinc-50 mb-6">
-              Por que reconstruir o portfólio?
-            </h2>
-            <div className="space-y-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              <p>
-                O portfólio de um Product Designer é, por essência, o seu produto mais importante. Quando utilizamos templates fechados ou ferramentas puramente visuais, terceirizamos as decisões de arquitetura e performance. A decisão de reconstruir não foi apenas estética, mas estratégica: eu precisava de um ambiente onde o código fosse a extensão natural do design.
-              </p>
+          <section className="flex flex-col md:flex-row gap-8 md:gap-16">
+            <div className="w-full md:w-1/3 shrink-0">
+              <h2 className="font-heading text-3xl font-extrabold tracking-tighter text-zinc-900 dark:text-zinc-50 md:sticky md:top-32">
+                01. Por que reconstruir o portfólio?
+              </h2>
+            </div>
+            <div className="w-full md:w-2/3 space-y-8">
+              <div className="space-y-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                <p>
+                  O portfólio de um Product Designer é, por essência, o seu produto mais importante. Quando utilizamos templates fechados ou ferramentas puramente visuais, terceirizamos as decisões de arquitetura e performance. A decisão de reconstruir não foi apenas estética, mas estratégica: eu precisava de um ambiente onde o código fosse a extensão natural do design.
+                </p>
+              </div>
             </div>
           </section>
 
-          <section>
-            <h2 className="font-heading text-4xl sm:text-5xl font-extrabold tracking-tighter text-zinc-900 dark:text-zinc-50 mb-6">
-              O Código como meio de design
-            </h2>
-            <div className="space-y-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              <p>
-                Neste projeto, não houve uma etapa exaustiva de telas no Figma. O design foi feito "in browser", utilizando o Tailwind CSS para prototipar diretamente em código. Isso permitiu testar espaçamentos, tipografia (Inter e Epilogue) e contrastes em tempo real, num ambiente real.
-              </p>
+          <hr className="border-t border-zinc-200 dark:border-zinc-800 hidden md:block" />
+
+          <section className="flex flex-col md:flex-row gap-8 md:gap-16">
+            <div className="w-full md:w-1/3 shrink-0">
+              <h2 className="font-heading text-3xl font-extrabold tracking-tighter text-zinc-900 dark:text-zinc-50 md:sticky md:top-32">
+                02. O Código como meio de design
+              </h2>
             </div>
-            
-            {/* Imagem Intermediária */}
-            <figure className="my-10">
-              <div className="w-full bg-zinc-900 rounded-2xl overflow-hidden shadow-2xl border border-zinc-800 aspect-video relative">
-                <Image src="/print-codigo.jpg" alt="Trecho de código do componente da navbar" fill className="object-cover" />
+            <div className="w-full md:w-2/3 space-y-8">
+              <div className="space-y-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                <p>
+                  Neste projeto, não houve uma etapa exaustiva de telas no Figma. O design foi feito "in browser", utilizando o Tailwind CSS para prototipar diretamente em código. Isso permitiu testar espaçamentos, tipografia (Inter e Epilogue) e contrastes em tempo real, num ambiente real.
+                </p>
               </div>
-              <figcaption className="text-center text-sm font-medium text-zinc-500 mt-4">
-                Estruturação direta de componentes em React e Tailwind CSS.
-              </figcaption>
-            </figure>
+              
+              {/* Imagem Intermediária */}
+              <ZoomableImage 
+                src="/print-codigo.jpg" 
+                alt="Trecho de código do componente da navbar" 
+                fill 
+                className="object-cover"
+                wrapperClassName="w-full mt-4 bg-zinc-900 rounded-2xl overflow-hidden shadow-2xl border border-zinc-800 aspect-video relative"
+                figcaption="Estruturação direta de componentes em React e Tailwind CSS."
+              />
+            </div>
           </section>
         </div>
 

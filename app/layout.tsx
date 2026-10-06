@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       {/* 2. Injetar variáveis e definir estrutura flex para empurrar o rodapé para o fundo (min-h-screen flex flex-col) */}
-      <body className={`${inter.variable} ${manrope.variable} font-sans bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 antialiased selection:bg-blue-200 dark:selection:bg-blue-900 flex flex-col min-h-screen`}>
+      <body suppressHydrationWarning className={`${inter.variable} ${manrope.variable} font-sans bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 antialiased selection:bg-blue-200 dark:selection:bg-blue-900 flex flex-col min-h-screen`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
