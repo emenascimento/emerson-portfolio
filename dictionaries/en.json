@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "portfolio": "This Portfolio",
+    "whatido": "What I do",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Let's talk"
+  },
+  "footer": {
+    "title": "Ready to chat?",
+    "description": "If you have a project in mind or just want to bounce ideas around design and tech, feel free to send me a message.",
+    "whatsapp": "Message on WhatsApp",
+    "email": "Send E-mail",
+    "rights": "All rights reserved.",
+    "madeWith": "Made with Next.js, Tailwind, and a lot of coffee."
+  }
+}
+

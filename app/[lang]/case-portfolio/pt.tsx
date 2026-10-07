@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ThemeToggle } from '../components/ThemeToggle';
-import { ScrollToTop } from '../components/ScrollToTop';
-import { ResumeModal } from '../components/ResumeModal';
+import { ThemeToggle } from '../../components/ThemeToggle';
+import { ScrollToTop } from '../../components/ScrollToTop';
+import { ResumeModal } from '../../components/ResumeModal';
 import { IconArrowLeft, IconArrowUpRight } from '@tabler/icons-react';
-import { ZoomableImage } from '../components/ZoomableImage';
+import { ZoomableImage } from '../../components/ZoomableImage';
 
-export default function CasePortfolio() {
+export default function CasePT() {
   return (
     <div className="font-sans relative bg-zinc-50 dark:bg-zinc-950 min-h-screen">
 
@@ -81,7 +81,7 @@ export default function CasePortfolio() {
             <div>
               <h3 className="font-heading text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-3">Resultado</h3>
               <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                Um portfólio ultra-rápido, com SEO otimizado, suporte nativo a Dark Mode e um Design System próprio em Tailwind CSS, validando a atuação end-to-end.
+                Um portfólio responsivo, totalmente bilíngue (PT/EN) e com SEO otimizado, tratado e evoluído como um produto digital real. Possui suporte nativo e performático a alternância de temas (Dark/Light mode) e obedece a critérios rigorosos de acessibilidade (contraste, HTML semântico e navegação), validando a minha atuação end-to-end.
               </p>
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function CasePortfolio() {
                 </h2>
                 <div className="space-y-4 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
                   <p>
-                    O foco foi a redução de ruído cognitivo. Eliminei páginas desnecessárias e consolidei as informações essenciais numa Single Page Application fluida. A navegação fixa com efeito "glassmorphism" e o modo escuro nativo foram implementados para garantir conforto visual em qualquer dispositivo.
+                    O foco foi a redução de ruído cognitivo. Eliminei páginas desnecessárias e consolidei as informações essenciais numa Single Page Application fluida. A navegação fixa com efeito "glassmorphism", o switch fluido de idiomas (PT/EN) e o toggle de tema claro/escuro nativo foram desenhados para garantir total controle, acessibilidade universal e conforto visual em qualquer dispositivo.
                   </p>
                 </div>
               </div>

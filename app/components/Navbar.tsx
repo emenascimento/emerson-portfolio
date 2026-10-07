@@ -2,22 +2,28 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { ThemeToggle } from './ThemeToggle';
 import { 
   IconBrandWhatsapp, 
   IconMenu2, 
   IconX,
-  IconArrowLeft 
+  IconArrowLeft,
+  IconLanguage
 } from '@tabler/icons-react';
+import ptDict from '../../dictionaries/pt.json';
+import enDict from '../../dictionaries/en.json';
 
-export function Navbar() {
+export function Navbar({ lang = 'pt' }: { lang?: string }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const pathname = usePathname();
+  const router = useRouter();
   
-  // Verifica se estamos na página inicial
-  const isHome = pathname === '/';
+  const dict = lang === 'en' ? enDict : ptDict;
+  
+  // Verifica se estamos na página inicial (/pt ou /en)
+  const isHome = pathname === '/' || pathname === `/${lang}` || pathname === `/${lang}/`;
 
   // IntersectionObserver para detectar qual sessão está visível na tela durante o scroll
   useEffect(() => {
@@ -67,7 +73,7 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
           
           <div className="flex items-center gap-4 sm:gap-8">
-            <Link href="/" className="font-heading font-extrabold text-xl tracking-tight text-zinc-900 dark:text-zinc-50">
+            <Link href={`/${lang}`} className="font-heading font-extrabold text-xl tracking-tight text-zinc-900 dark:text-zinc-50">
               EN<span className="text-[#155dfc]">.</span>
             </Link>
             
@@ -75,34 +81,34 @@ export function Navbar() {
             {isHome ? (
               <div className="hidden sm:flex items-center gap-6 text-sm font-medium text-zinc-500 dark:text-zinc-400">
                 <Link href="#projetos" onClick={() => handleLinkClick('projetos')} className={getDesktopLinkClass('projetos')}>
-                  Projetos
+                  {dict.nav.projects}
                 </Link>
                 <Link href="#portfolio-produto" onClick={() => handleLinkClick('portfolio-produto')} className={getDesktopLinkClass('portfolio-produto')}>
-                  Este Portfólio
+                  {dict.nav.portfolio}
                 </Link>
                 <Link href="#o-que-faco" onClick={() => handleLinkClick('o-que-faco')} className={getDesktopLinkClass('o-que-faco')}>
-                  O que faço
+                  {dict.nav.whatido}
                 </Link>
                 <Link href="#sobre" onClick={() => handleLinkClick('sobre')} className={getDesktopLinkClass('sobre')}>
-                  Sobre
+                  {dict.nav.about}
                 </Link>
                 <Link href="#contato" onClick={() => handleLinkClick('contato')} className={getDesktopLinkClass('contato')}>
-                  Contato
+                  {dict.nav.contact}
                 </Link>
               </div>
             ) : (
               <>
                 <div className="w-px h-4 bg-zinc-300 dark:bg-zinc-700 hidden sm:block"></div>
-                <Link href="/" className="flex items-center gap-1.5 text-sm font-medium text-zinc-500 hover:text-[#155dfc] dark:text-zinc-400 dark:hover:text-[#155dfc] transition-colors">
+                <Link href={`/${lang}`} className="flex items-center gap-1.5 text-sm font-medium text-zinc-500 hover:text-[#155dfc] dark:text-zinc-400 dark:hover:text-[#155dfc] transition-colors">
                   <IconArrowLeft size={16} stroke={2} />
-                  <span className="hidden sm:inline">Voltar à Home</span>
-                  <span className="sm:hidden">Voltar</span>
+                  <span className="hidden sm:inline">{lang === 'pt' ? 'Voltar à Home' : 'Back to Home'}</span>
+                  <span className="sm:hidden">{lang === 'pt' ? 'Voltar' : 'Back'}</span>
                 </Link>
               </>
             )}
           </div>
 
-          {/* Lado Direito: CTA, Tema e Hambúrguer */}
+          {/* Lado Direito: CTA, Idioma, Tema e Hambúrguer */}
           <div className="flex items-center gap-3 sm:gap-4">
             <Link 
               href="https://wa.me/5511977089503" 
@@ -110,11 +116,27 @@ export function Navbar() {
               className="hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium text-zinc-50 bg-zinc-900 hover:bg-zinc-800 rounded-full dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200 transition-all shadow-sm"
             >
               <IconBrandWhatsapp size={18} stroke={1.5} />
-              Vamos conversar
+              {dict.nav.cta}
             </Link>
             
             <div className="w-px h-4 bg-zinc-300 dark:bg-zinc-700 hidden sm:block"></div>
             
+            {/* Language Switcher (Pill Switch) */}
+            <div className="flex items-center bg-zinc-200/60 dark:bg-zinc-800/60 rounded-full p-1 border border-zinc-300/50 dark:border-zinc-700/50">
+              <button
+                onClick={() => router.push(pathname.replace(`/${lang}`, `/pt`))}
+                className={`px-3 py-1.5 text-xs font-bold rounded-full transition-all ${lang === 'pt' ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50 shadow-sm' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-50'}`}
+              >
+                PT
+              </button>
+              <button
+                onClick={() => router.push(pathname.replace(`/${lang}`, `/en`))}
+                className={`px-3 py-1.5 text-xs font-bold rounded-full transition-all ${lang === 'en' ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50 shadow-sm' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-50'}`}
+              >
+                EN
+              </button>
+            </div>
+
             <ThemeToggle />
 
             {/* Mostra o hambúrguer apenas na Home */}
@@ -138,19 +160,19 @@ export function Navbar() {
           <div className="sm:hidden border-t border-zinc-200/80 dark:border-zinc-800/80 bg-zinc-50/95 dark:bg-zinc-950/95 backdrop-blur-md px-6 py-6 animate-in slide-in-from-top-2 duration-200">
             <div className="flex flex-col gap-4 text-base font-semibold">
               <Link href="#projetos" onClick={() => handleLinkClick('projetos')} className={getMobileLinkClass('projetos')}>
-                Projetos
+                {dict.nav.projects}
               </Link>
               <Link href="#portfolio-produto" onClick={() => handleLinkClick('portfolio-produto')} className={getMobileLinkClass('portfolio-produto')}>
-                Este Portfólio
+                {dict.nav.portfolio}
               </Link>
               <Link href="#o-que-faco" onClick={() => handleLinkClick('o-que-faco')} className={getMobileLinkClass('o-que-faco')}>
-                O que faço
+                {dict.nav.whatido}
               </Link>
               <Link href="#sobre" onClick={() => handleLinkClick('sobre')} className={getMobileLinkClass('sobre')}>
-                Sobre
+                {dict.nav.about}
               </Link>
               <Link href="#contato" onClick={() => handleLinkClick('contato')} className={getMobileLinkClass('contato')}>
-                Contato
+                {dict.nav.contact}
               </Link>
 
               <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800">
@@ -161,7 +183,7 @@ export function Navbar() {
                   className="flex items-center justify-center gap-2 w-full px-5 py-3 text-sm font-medium text-zinc-50 bg-zinc-900 hover:bg-zinc-800 rounded-full dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200 transition-all"
                 >
                   <IconBrandWhatsapp size={18} stroke={1.5} />
-                  Vamos conversar
+                  {dict.nav.cta}
                 </Link>
               </div>
             </div>

@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "projects": "Projetos",
+    "portfolio": "Este Portfólio",
+    "whatido": "O que faço",
+    "about": "Sobre",
+    "contact": "Contato",
+    "cta": "Vamos conversar"
+  },
+  "footer": {
+    "title": "Pronto para conversarmos?",
+    "description": "Se você tem um projeto em mente ou apenas quer trocar uma ideia sobre design e tecnologia, sinta-se à vontade para me mandar uma mensagem.",
+    "whatsapp": "Chamar no WhatsApp",
+    "email": "Enviar E-mail",
+    "rights": "Todos os direitos reservados.",
+    "madeWith": "Feito com Next.js, Tailwind e muito café."
+  }
+}
+

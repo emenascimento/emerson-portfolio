@@ -1,7 +1,11 @@
 import Link from 'next/link';
 import { ResumeModal } from './ResumeModal';
+import ptDict from '../../dictionaries/pt.json';
+import enDict from '../../dictionaries/en.json';
 
-export function Footer() {
+export function Footer({ lang = 'pt' }: { lang?: string }) {
+  const dict = lang === 'en' ? enDict : ptDict;
+
   return (
     <footer className="w-full bg-zinc-50 dark:bg-zinc-950 py-12 border-t border-zinc-200 dark:border-zinc-800">
       <div className="max-w-7xl mx-auto px-6 flex flex-col gap-6 items-center text-center">
@@ -15,7 +19,9 @@ export function Footer() {
             LinkedIn
           </Link>
           
-          <ResumeModal />
+          <ResumeModal lang={lang}>
+            {lang === 'en' ? 'Resume' : 'Currículo'}
+          </ResumeModal>
           
           <Link 
             href="mailto:contato.emenascimento@gmail.com" 
@@ -26,7 +32,7 @@ export function Footer() {
         </div>
 
         <p className="text-sm font-medium text-zinc-400 dark:text-zinc-600 text-center">
-          Copyright 2026 © Emerson Nascimento. Todos os direitos reservados.
+          Copyright 2026 © Emerson Nascimento. {dict.footer.rights}
         </p>
         
       </div>
