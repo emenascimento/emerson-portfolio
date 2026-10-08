@@ -48,7 +48,7 @@ export default function CasePT() {
         <div className="max-w-7xl mx-auto px-6 mb-16 sm:mb-24">
           <div className="relative w-full aspect-video bg-zinc-200 dark:bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
             <Image 
-              src="/vscode.jpg" 
+              src="/case-portfolio/Este-portfolio-e-um-produto2.jpg" 
               alt="Ambiente de desenvolvimento do portfólio no VS Code" 
               fill 
               className="object-cover" 
@@ -217,4 +217,5 @@ export default function CasePT() {
     </div>
   );
 }
+
 
