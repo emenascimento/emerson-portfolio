@@ -1,21 +1,27 @@
 "use client";
-
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { IconSun, IconMoon } from "@tabler/icons-react";
+import { usePathname } from "next/navigation";
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState("light");
   const [mounted, setMounted] = useState(false);
+  const pathname = usePathname();
 
-  useEffect(() => {
+  // useLayoutEffect executa antes do paint do navegador, evitando o "flash" claro
+  useLayoutEffect(() => {
     setMounted(true);
     const stored = localStorage.getItem("theme");
-    if (stored) {
-      setTheme(stored);
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    const isDark = stored === "dark" || (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    
+    if (isDark) {
       setTheme("dark");
+      document.documentElement.classList.add("dark");
+    } else {
+      setTheme("light");
+      document.documentElement.classList.remove("dark");
     }
-  }, []);
+  }, [pathname]);
 
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
