@@ -187,7 +187,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
             <div className="flex-1 w-full z-10">
               <div className="relative w-full aspect-[4/3] bg-zinc-900 dark:bg-zinc-950 rounded-2xl overflow-hidden border border-zinc-300 dark:border-zinc-700 shadow-2xl flex items-center justify-center">
-                 <Image src="/cover-portfolio.jpg" alt="Mockup do Portfólio" fill className="object-contain object-center" />
+                 <Image src="/case-portfolio/Este-portfolio-e-um-produto.jpg" alt="Mockup do Portfólio" fill className="object-contain object-center" />
               </div>
             </div>
           </div>
