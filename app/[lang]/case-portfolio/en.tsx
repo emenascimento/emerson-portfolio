@@ -125,7 +125,7 @@ export default function CaseEN() {
                 alt="Interface of a visual website building platform (Framer)" 
                 fill 
                 className="object-cover"
-                wrapperClassName="w-full mt-4 bg-zinc-900 rounded-2xl overflow-hidden shadow-2xl border border-zinc-800 aspect-video relative"
+                wrapperClassName="w-full mt-4 rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 dark:border-zinc-800 aspect-video relative"
                 figcaption="Relying on visual tools limited our control over the site's structure and speed."
               />
             </div>
@@ -152,7 +152,7 @@ export default function CaseEN() {
                 alt="Code snippet of the navbar component" 
                 fill 
                 className="object-cover"
-                wrapperClassName="w-full mt-4 bg-zinc-900 rounded-2xl overflow-hidden shadow-2xl border border-zinc-800 aspect-video relative"
+                wrapperClassName="w-full mt-4 rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 dark:border-zinc-800 aspect-video relative"
                 figcaption="Direct component structuring in React and Tailwind CSS."
               />
             </div>
@@ -217,3 +217,4 @@ export default function CaseEN() {
     </div>
   );
 }
+

@@ -125,7 +125,7 @@ export default function CasePT() {
                 alt="Interface de uma plataforma visual de construção de sites (Framer)" 
                 fill 
                 className="object-cover"
-                wrapperClassName="w-full mt-4 bg-zinc-900 rounded-2xl overflow-hidden shadow-2xl border border-zinc-800 aspect-video relative"
+                wrapperClassName="w-full mt-4 rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 dark:border-zinc-800 aspect-video relative"
                 figcaption="A dependência de ferramentas visuais limitava o controle sobre a estrutura e velocidade do site."
               />
             </div>
@@ -152,7 +152,7 @@ export default function CasePT() {
                 alt="Trecho de código do componente da navbar" 
                 fill 
                 className="object-cover"
-                wrapperClassName="w-full mt-4 bg-zinc-900 rounded-2xl overflow-hidden shadow-2xl border border-zinc-800 aspect-video relative"
+                wrapperClassName="w-full mt-4 rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 dark:border-zinc-800 aspect-video relative"
                 figcaption="Estruturação direta de componentes em React e Tailwind CSS."
               />
             </div>
@@ -217,3 +217,4 @@ export default function CasePT() {
     </div>
   );
 }
+
