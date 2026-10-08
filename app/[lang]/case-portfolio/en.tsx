@@ -116,9 +116,18 @@ export default function CaseEN() {
             <div className="w-full md:w-2/3 space-y-8">
               <div className="space-y-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
                 <p>
-                  The previous site built in Framer gave us clear evidence of the limitations of No-Code platforms. We faced <strong>vendor lock-in</strong> (difficulty migrating or scaling outside the tool's ecosystem), major barriers in fine-tuning accessibility, and a load time heavily impacted by the forced injection of third-party scripts.
+                  The previous site built in Framer gave us clear evidence of the limitations of visual platforms. We experienced firsthand the difficulty of migrating or expanding the project outside the tool's environment, faced major barriers in making it fully accessible to all audiences, and saw the load time suffer due to hidden code that the platform itself added without our control.
                 </p>
               </div>
+
+              <ZoomableImage 
+                src="/case-portfolio/framer_1.jpg" 
+                alt="Interface of a visual website building platform (Framer)" 
+                fill 
+                className="object-cover"
+                wrapperClassName="w-full mt-4 bg-zinc-900 rounded-2xl overflow-hidden shadow-2xl border border-zinc-800 aspect-video relative"
+                figcaption="Relying on visual tools limited our control over the site's structure and speed."
+              />
             </div>
           </section>
 

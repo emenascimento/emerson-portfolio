@@ -116,9 +116,18 @@ export default function CasePT() {
             <div className="w-full md:w-2/3 space-y-8">
               <div className="space-y-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
                 <p>
-                  O site anterior construído no Framer nos trouxe evidências claras das limitações de plataformas No-Code. Enfrentamos <strong>vendor lock-in</strong> (dificuldade de migrar ou escalar fora do ecossistema da ferramenta), grandes barreiras na otimização fina de acessibilidade e um tempo de carregamento prejudicado pela injeção forçada de scripts de terceiros da própria plataforma.
+                  O site anterior construído no Framer nos trouxe evidências claras das limitações de plataformas visuais. Sentimos na prática a dificuldade de migrar ou expandir o projeto para fora do ambiente da ferramenta, enfrentamos grandes barreiras para melhorar a acessibilidade para todos os públicos e vimos o tempo de carregamento ser prejudicado por códigos invisíveis que a própria plataforma adicionava sem nosso controle.
                 </p>
               </div>
+
+              <ZoomableImage 
+                src="/case-portfolio/framer_1.jpg" 
+                alt="Interface de uma plataforma visual de construção de sites (Framer)" 
+                fill 
+                className="object-cover"
+                wrapperClassName="w-full mt-4 bg-zinc-900 rounded-2xl overflow-hidden shadow-2xl border border-zinc-800 aspect-video relative"
+                figcaption="A dependência de ferramentas visuais limitava o controle sobre a estrutura e velocidade do site."
+              />
             </div>
           </section>
 
