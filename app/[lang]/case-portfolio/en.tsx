@@ -110,7 +110,24 @@ export default function CaseEN() {
           <section className="flex flex-col md:flex-row gap-8 md:gap-16">
             <div className="w-full md:w-1/3 shrink-0">
               <h2 className="font-heading text-3xl font-extrabold tracking-tighter text-zinc-900 dark:text-zinc-50 md:sticky md:top-32">
-                02. Code as a design medium
+                02. The limitations of No-Code
+              </h2>
+            </div>
+            <div className="w-full md:w-2/3 space-y-8">
+              <div className="space-y-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                <p>
+                  The previous site built in Framer gave us clear evidence of the limitations of No-Code platforms. We faced <strong>vendor lock-in</strong> (difficulty migrating or scaling outside the tool's ecosystem), major barriers in fine-tuning accessibility, and a load time heavily impacted by the forced injection of third-party scripts.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <hr className="border-t border-zinc-200 dark:border-zinc-800 hidden md:block" />
+
+          <section className="flex flex-col md:flex-row gap-8 md:gap-16">
+            <div className="w-full md:w-1/3 shrink-0">
+              <h2 className="font-heading text-3xl font-extrabold tracking-tighter text-zinc-900 dark:text-zinc-50 md:sticky md:top-32">
+                03. Code as a design medium
               </h2>
             </div>
             <div className="w-full md:w-2/3 space-y-8">

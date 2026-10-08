@@ -110,7 +110,24 @@ export default function CasePT() {
           <section className="flex flex-col md:flex-row gap-8 md:gap-16">
             <div className="w-full md:w-1/3 shrink-0">
               <h2 className="font-heading text-3xl font-extrabold tracking-tighter text-zinc-900 dark:text-zinc-50 md:sticky md:top-32">
-                02. O Código como meio de design
+                02. As limitações do No-Code
+              </h2>
+            </div>
+            <div className="w-full md:w-2/3 space-y-8">
+              <div className="space-y-6 text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                <p>
+                  O site anterior construído no Framer nos trouxe evidências claras das limitações de plataformas No-Code. Enfrentamos <strong>vendor lock-in</strong> (dificuldade de migrar ou escalar fora do ecossistema da ferramenta), grandes barreiras na otimização fina de acessibilidade e um tempo de carregamento prejudicado pela injeção forçada de scripts de terceiros da própria plataforma.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <hr className="border-t border-zinc-200 dark:border-zinc-800 hidden md:block" />
+
+          <section className="flex flex-col md:flex-row gap-8 md:gap-16">
+            <div className="w-full md:w-1/3 shrink-0">
+              <h2 className="font-heading text-3xl font-extrabold tracking-tighter text-zinc-900 dark:text-zinc-50 md:sticky md:top-32">
+                03. O Código como meio de design
               </h2>
             </div>
             <div className="w-full md:w-2/3 space-y-8">
